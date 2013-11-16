@@ -7,3 +7,9 @@
 #issues circle {
    fill:#D9534F;
 }
+
+.close.inline-close {
+	float:none;
+	position:relative;
+	top: 3px;
+}
