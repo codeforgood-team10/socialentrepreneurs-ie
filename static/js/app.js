@@ -8,12 +8,24 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
 	$scope.newIssue = {};
 	$scope.issuesService = IssuesService;
 
+  $scope.calculateCircleX = function(index) {
+    return 50;
+  }
+  $scope.calculateCircleY = function(index) {
+    return (index * 50) +20;
+  }
 	$scope.addIssue = function(newIssue) {
 	  newIssue.time = new Date();
 	  IssuesService.issues.push(newIssue);
 	  $scope.newIssue = newIssue = {};
 	}
-})
+});
+
+dashboard.filter('fromNow', function () {
+  return function (dateString) {
+    return moment(new Date(dateString)).fromNow();
+  };
+});
 
 dashboard.directive('ngEnter', function () {
 	return function (scope, element, attrs) {

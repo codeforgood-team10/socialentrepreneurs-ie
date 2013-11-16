@@ -1,30 +1,35 @@
 <html ng-app="dashboard">
 <head>
 	<title>Entrepreneur dashboard</title>
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
 <body>
 <div class="container">
 	<div class="col-lg-8 col-lg-offset-2">
 		<h3>Entrepreneur dashboard</h3>
 		<hr>
-		<div class="box" ng-controller="IssuesController">
+		<div class="box" id="issues" ng-controller="IssuesController">
 
 			<h4 class="align-center">Issues</h4>
-			<ul class="inside">
-				<li>
-					<input type="text" placeholder="Type a issue" ng-model="newIssue.text" ng-enter="addIssue(newIssue)">
-				</li>
-				<li>
-					
-				</li>
-				<li ng-repeat="issue in issuesService.issues | orderBy:'time':true">{{issue.text}}</li>
-			</ul>
+        <svg xmlns="http://www.w3.org/2000/svg" class="content">
+          <g>
+            <line ng-attr-x1="{{ 40/2 }}" y1="0" ng-attr-x2="{{ 40/2 }}" ng-attr-y2="{{ (issuesService.issues.length+1) * 50 - 20 }}"/>
+          </g>
+          <g ng-repeat="issue in issuesService.issues | orderBy:'time':true">
+            <circle class="circleIssue" cx="20" ng-attr-cy="{{ calculateCircleY($index) }}" r="20"></circle>
+            <foreignobject x="50" ng-attr-y="{{ ($index*50) + 10 }}" width="100%" height="180">
+              <span class="label label-danger">{{ issue.time | fromNow }}</span>
+              {{issue.text}}
+            </foreignobject>
+
+          </g>
+        </svg>
 		</div>
 	</div>
 </div>
 <script src="components/angular/angular.js"></script>
+<script src="components/moment/moment.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
