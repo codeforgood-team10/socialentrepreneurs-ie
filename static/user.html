@@ -38,8 +38,8 @@
             <circle class="circleIssue" cx="20" ng-attr-cy="{{ calculateCircleY($index+1) }}" r="20"></circle>
             <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 10 }}" width="100%" height="180">
               <span class="label label-danger">{{ issue.time | fromNow }}</span>
-              {{issue.text}}
-              <span class="close" ng-click="deleteIssue($index)">&times;</span>
+              {{issue.text}} &nbsp; 
+              <span class="close inline-close" ng-click="deleteIssue($index)">&times;</span>
             </foreignobject>
 
           </g>

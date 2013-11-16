@@ -15,9 +15,11 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
     return (index * 50) +20;
   }
 	$scope.addIssue = function(newIssue) {
-	  newIssue.time = new Date();
-	  IssuesService.issues.push(newIssue);
-	  $scope.newIssue = newIssue = {};
+		if (! newIssue.text) return;
+
+		newIssue.time = new Date();
+		IssuesService.issues.push(newIssue);
+		$scope.newIssue = newIssue = {};
 	}
 
 	$scope.deleteIssue = function(index) {
