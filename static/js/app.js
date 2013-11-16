@@ -13,6 +13,12 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
 	  IssuesService.issues.push(newIssue);
 	  $scope.newIssue = newIssue = {};
 	}
+
+	$scope.deleteIssue = function(index) {
+		console.log(index);
+		issueListSize = IssuesService.issues.length;
+		IssuesService.issues.splice(issueListSize - index - 1, 1);
+	}
 })
 
 dashboard.directive('ngEnter', function () {
