@@ -30,17 +30,21 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
 		newIssue.time = new Date();
     newIssue.solved = false;
 		IssuesService.issues.push(newIssue);
-    $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
 		$scope.newIssue = newIssue = {};
 	}
 
   $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
-	$scope.delete = function(index) {
+	$scope.delete = function(issue) {
+    var index = IssuesService.issues.indexOf(issue);
 		console.log(index);
-		issueListSize = IssuesService.issues.length;
-		IssuesService.issues.splice(issueListSize - index - 1, 1);
+		IssuesService.issues.splice(index, 1);
 	}
-})
+
+  $scope.$watchCollection('issuesService.issues', function(issuesService) {
+    $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
+  })
+
+});
 
 
 x = {};
