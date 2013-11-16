@@ -27,6 +27,28 @@
     fill: #FFCAC8;
 }
 
+.circleMilestoneFuture {
+	fill: #ffd700;
+}
+
+.circleMilestonePast {
+	fill: #99cc32;
+}
+
+.circleHole {
+	fill: #ffffff;
+}
+
+.lineMilestoneFuture {
+	stroke:#ffd700;
+	stroke-width:10;
+}
+
+.lineMilestonePast {
+	stroke:#99cc32;
+	stroke-width:10;
+}
+
 .close.inline-close {
 	float:none;
 	position:relative;

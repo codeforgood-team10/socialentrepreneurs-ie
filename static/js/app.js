@@ -43,21 +43,40 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
 })
 
 
+x = {};
+
 /*==================
 AngularJS Milestones
 ====================*/
 dashboard.service('MilestoneService', function() {
 	this.milestone = [{text:"Issue here", time: new Date(), solved: true}, {text:"Issues 2 eye", time: new Date(), solved: false}];
 	this.solvedMilestone = [];
+
+	this.getFutureMilestoneNumber = function() {
+		return this.milestone.filter(function(val){return val.solved==false}).length;
+	}
+
+	this.getPastMilestoneNumber = function() {
+		return this.milestone.filter(function(val){return val.solved==true}).length;
+	}
+
 });
 
 dashboard.controller('MilestoneController', function($scope, MilestoneService){
 	$scope.newMilestone = {};
 	$scope.milestoneService = MilestoneService;
 
+	$scope.getFutureMilestoneNumber = function() {
+		return MilestoneService.milestone.filter(function(val){return val.solved==false}).length;
+	}
+
+	$scope.getPastMilestoneNumber = function() {
+		return MilestoneService.milestone.filter(function(val){return val.solved==true}).length;
+	}
+
 	$scope.add = function(newMilestone) {
 		if (! newMilestone.text) return;
-    newMilestone.solved = false;
+		newMilestone.solved = false;
 		newMilestone.time = new Date();
 		MilestoneService.milestone.push(newMilestone);
 		$scope.newMilestone = newMilestone = {};
@@ -70,6 +89,14 @@ dashboard.controller('MilestoneController', function($scope, MilestoneService){
 
 	$scope.toggle = function(milestone) {
 		milestone.solved = !milestone.solved;
+	}
+
+	$scope.calculateCircleX = function(index) {
+		return 50;
+	}
+
+	$scope.calculateCircleY = function(index) {
+		return (index * 50) + 20;
 	}
 })
 

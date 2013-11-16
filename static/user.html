@@ -52,25 +52,85 @@
 
 			<h4>Milestones ({{ (milestoneService.milestone | filter:{solved:false}).length  }})</h4>
 
-			<ul class="inside simple-list">
-				<li>
-					<input type="checkbox">
-					<input type="text" placeholder="Add a new milestone" ng-model="newMilestone.text" ng-enter="add(newMilestone)">
-				</li>
-				<li ng-repeat="milestone in milestoneService.milestone | filter:{solved: false} | orderBy:'time':true">
-					<input type="checkbox" ng-click="toggle(milestone)">
-					{{milestone.text}} 
-				</li>
-			</ul>
+			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (getFutureMilestoneNumber() + 1) * 50 }}">
+
+				<line 
+					class="lineMilestoneFuture"
+					ng-attr-x1="{{ 40/2 }}" 
+					y1="1" 
+					ng-attr-x2="{{ 40/2 }}" 
+					ng-attr-y2="{{ (getFutureMilestoneNumber() + 1) * 50 - 20 }}">
+				</line>
+
+				<g>
+					<circle class="circleMilestoneFuture" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
+					<circle class="circleHole" cx="20" ng-attr-cy="{{ 20 }} " ng-attr-r=" {{ 20 - 5 }}"> </circle>
+					<foreignobject x="50" ng-attr-y="{{ 10 }}" width="100%" height="180">
+						<input type="text" placeholder="Insert new milestone" ng-model="newMilestone.text" ng-enter="add(newMilestone)">
+					</foreignobject>
+				</g>
+
+				<g ng-repeat="milestone in milestoneService.milestone | filter:{solved: false} | orderBy:'time':true">
+					<circle 
+						class="circleMilestoneFuture" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index + 1) }}" 
+						r="20">	
+					</circle>
+					<circle 
+						class="circleHole" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index + 1) }}" 
+						ng-attr-r=" {{ 20 - 5 }}"> 
+					</circle>
+					<foreignobject 
+						x="50" 
+						ng-attr-y="{{ calculateCircleY($index + 1) }}" 
+						width="100%" 
+						height="180">
+							{{milestone.text}}
+					</foreignobject>
+				</g>
+			</svg>
 
 			<h4>Solved Milestones ({{ (milestoneService.milestone | filter:{solved:true}).length  }})</h4>
 
-			<ul class="inside simple-list">
-				<li ng-repeat="milestone in milestoneService.milestone | filter:{solved: true} | orderBy:'time':true" class="strike">
-					<input type="checkbox" ng-click="toggle(milestone)" checked>
-					{{milestone.text}}
-				</li>
-			</ul>
+			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ getPastMilestoneNumber() * 50 }}">
+
+				<line 
+					class="lineMilestonePast"
+					ng-attr-x1="{{ 40/2 }}" 
+					y1="1" 
+					ng-attr-x2="{{ 40/2 }}" 
+					ng-attr-y2="{{ getPastMilestoneNumber() * 50 - 20 }}">
+				</line>
+
+				<g ng-repeat="milestone in milestoneService.milestone | filter:{solved: true} | orderBy:'time':true">
+					<circle 
+						class="circleMilestonePast" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						r="20">
+					</circle>
+					<circle 
+						class="circleHole" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						ng-attr-r=" {{ 20 - 5 }}"> 
+					</circle>
+					<foreignobject 
+						x="50" 
+						ng-attr-y="{{ calculateCircleY($index) }}" 
+						width="100%" 
+						height="180">
+							{{milestone.text}}
+					</foreignobject>
+				</g>
+			</svg>
 
 		</div>
 
