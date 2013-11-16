@@ -4,6 +4,11 @@ dashboard.service('IssuesService', function() {
 	this.issues = [{text:"Issue here", time: new Date()}, {text:"Issues 2 eye", time: new Date()}];
 });
 
+
+/*==================
+AngularJS Issues
+==================*/
+
 dashboard.controller('IssuesController', function($scope, IssuesService){
 	$scope.newIssue = {};
 	$scope.issuesService = IssuesService;
@@ -14,7 +19,7 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
   $scope.calculateCircleY = function(index) {
     return (index * 50) +20;
   }
-	$scope.addIssue = function(newIssue) {
+	$scope.add = function(newIssue) {
 		if (! newIssue.text) return;
 
 		newIssue.time = new Date();
@@ -22,12 +27,46 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
 		$scope.newIssue = newIssue = {};
 	}
 
-	$scope.deleteIssue = function(index) {
+	$scope.delete = function(index) {
 		console.log(index);
 		issueListSize = IssuesService.issues.length;
 		IssuesService.issues.splice(issueListSize - index - 1, 1);
 	}
 })
+
+
+/*==================
+AngularJS Milestones
+====================*/
+dashboard.service('MilestoneService', function() {
+	this.milestone = [{text:"Issue here", time: new Date(), solved: true}, {text:"Issues 2 eye", time: new Date(), solved: false}];
+	this.solvedMilestone = [];
+});
+
+dashboard.controller('MilestoneController', function($scope, MilestoneService){
+	$scope.newMilestone = {};
+	$scope.milestoneService = MilestoneService;
+
+	$scope.add = function(newMilestone) {
+		if (! newMilestone.text) return;
+    newMilestone.solved = false;
+		newMilestone.time = new Date();
+		MilestoneService.milestone.push(newMilestone);
+		$scope.newMilestone = newMilestone = {};
+	}
+
+	$scope.delete = function(index) {
+		milestoneListSize = MilestoneService.milestone.length;
+		MilestoneService.milestone.splice(milestoneListSize - index - 1, 1);
+	}
+
+	$scope.toggle = function(milestone) {
+		milestone.solved = !milestone.solved;
+	}
+})
+
+
+//Utils
 
 dashboard.filter('fromNow', function () {
   return function (dateString) {

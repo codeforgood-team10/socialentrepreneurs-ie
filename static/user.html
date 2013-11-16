@@ -29,7 +29,7 @@
           <g>
             <circle class="circleIssue" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
             <foreignobject x="50" ng-attr-y="{{ 10 }}" width="100%" height="180">
-              <input type="text" placeholder="New issue encountered" ng-model="newIssue.text" ng-enter="addIssue(newIssue)">
+              <input type="text" placeholder="New issue encountered" ng-model="newIssue.text" ng-enter="add(newIssue)">
             </foreignobject>
 
           </g>
@@ -39,7 +39,7 @@
             <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 10 }}" width="100%" height="180">
               <span class="label label-danger">{{ issue.time | fromNow }}</span>
               {{issue.text}} &nbsp; 
-              <span class="close inline-close" ng-click="deleteIssue($index)">&times;</span>
+              <span class="close inline-close" ng-click="delete($index)">&times;</span>
             </foreignobject>
 
           </g>
@@ -47,6 +47,34 @@
 
       <div class="chart" d3-issues></div>
 		</div>
+
+		<div class="box" id="milestone" ng-controller="MilestoneController">
+
+			<h4> Milestones</h4>
+
+			<ul class="inside simple-list">
+				<li>
+					<input type="checkbox">
+					<input type="text" placeholder="Add a new milestone" ng-model="newMilestone.text" ng-enter="add(newMilestone)">
+				</li>
+				<li ng-repeat="milestone in milestoneService.milestone | filter:{solved: false} | orderBy:'time':true">
+					<input type="checkbox" ng-click="toggle(milestone)">
+					{{milestone.text}} 
+				</li>
+			</ul>
+
+			<h4> Solved Milestones</h4>
+
+			<ul class="inside simple-list">
+				<li ng-repeat="milestone in milestoneService.milestone | filter:{solved: true} | orderBy:'time':true">
+					<input type="checkbox" ng-click="toggle(milestone)" checked>
+					{{milestone.text}}
+				</li>
+			</ul>
+
+		</div>
+
+
 	</div>
 </div>
 

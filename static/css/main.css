@@ -46,3 +46,6 @@
 .x.axis path {
     display: none;
 }
+.simple-list {
+	list-style-type:none;
+}
