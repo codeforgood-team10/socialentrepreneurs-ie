@@ -138,9 +138,13 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         var frequency = {};
 
         _.map(issues, function(issue) {
-          var day = moment(issue.time).format("YYYY-MM-DD");
-          if (!frequency[issue.time]) frequency[day] = [];
-          frequency[day].push(issue);
+          var time = moment(issue.time).format("YYYY-MM-DD");
+          if (!frequency[issue.time]) frequency[time] = [];
+          if (issue.solved && !frequency[issue.solvedTime]) {
+            var solvedTime = moment(issue.solvedTime).format("YYYY-MM-DD");
+            frequency[solvedTime] = [];
+          }
+          frequency[time].push(issue);
         });
 
 
@@ -150,12 +154,12 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
           var day = days[i];
           _.map(issues, function(issue) {
             if (frequency[day].indexOf(issue) > -1) return;
-            if (!issue.solved && +issue.time <= +(new Date(day))) frequency[day].push(issue);
-            if (issue.solved && +issue.time <= +(new Date(day)) && +issue.solvedTime >= +(new Date(day))) frequency[day].push(issue);
+            if (!issue.solved && +issue.time < +(new Date(day))) frequency[day].push(issue);
+            if (issue.solved && +issue.time < +(new Date(day)) && +issue.solvedTime > +(new Date(day))) frequency[day].push(issue);
             return;
           })
         }
-
+        console.log(frequency);
         return _.sortBy(_.pairs(frequency), function(d) {
           return d[0];
         })
@@ -163,7 +167,7 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
 
       scope.render = function(data) {
 
-        data = calculate_frequency(data);
+        var data = calculate_frequency(data);
 
         var margin = {top: 20, right: 20, bottom: 30, left: 50},
           width = 730 - margin.left - margin.right,

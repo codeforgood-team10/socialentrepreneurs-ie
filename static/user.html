@@ -21,7 +21,7 @@
 		<div class="box" id="issues" ng-controller="IssuesController">
 
 			<h4 class="align-center">Issues ({{ unsolved.length || 0 }})</h4>
-
+        <div class="chart" d3-issues></div>
         <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{  (unsolved.length+1) * 50 }}">
           <g>
             <line ng-attr-x1="{{ 40/2 }}" y1="1" ng-attr-x2="{{ 40/2 }}" ng-attr-y2="{{ (unsolved.length+1) * 50 - 20 }}"/>
@@ -44,8 +44,6 @@
 
           </g>
         </svg>
-
-      <div class="chart" d3-issues></div>
 		</div>
 
 		<div class="box" id="milestone" ng-controller="MilestoneController">
