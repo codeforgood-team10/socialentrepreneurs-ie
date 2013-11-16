@@ -49,3 +49,6 @@
 .simple-list {
 	list-style-type:none;
 }
+.strike {
+    text-decoration:line-through;
+}

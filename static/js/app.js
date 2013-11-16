@@ -1,7 +1,12 @@
 var dashboard = angular.module('dashboard', []);
 
 dashboard.service('IssuesService', function() {
-	this.issues = [{text:"Issue here", time: new Date()}, {text:"Issues 2 eye", time: new Date()}];
+	this.issues = [
+    {text:"Issue here", time: new Date("2012-10-06"), solved: false},
+    {text:"Issues 2 eye", time: new Date("2012-10-01"), solvedTime:new Date("2012-10-04"), solved:true},
+    {text:"Issues 2 eye", time: new Date("2012-10-02"), solvedTime:new Date("2012-10-05"), solved:true},
+    {text:"Issues 2 eye", time: new Date("2012-10-03"), solvedTime:new Date("2012-10-05"), solved:true}
+  ];
 });
 
 
@@ -9,7 +14,7 @@ dashboard.service('IssuesService', function() {
 AngularJS Issues
 ==================*/
 
-dashboard.controller('IssuesController', function($scope, IssuesService){
+dashboard.controller('IssuesController', function($scope, IssuesService, $filter){
 	$scope.newIssue = {};
 	$scope.issuesService = IssuesService;
 
@@ -23,10 +28,13 @@ dashboard.controller('IssuesController', function($scope, IssuesService){
 		if (! newIssue.text) return;
 
 		newIssue.time = new Date();
+    newIssue.solved = false;
 		IssuesService.issues.push(newIssue);
+    $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
 		$scope.newIssue = newIssue = {};
 	}
 
+  $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
 	$scope.delete = function(index) {
 		console.log(index);
 		issueListSize = IssuesService.issues.length;
@@ -96,10 +104,41 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
       });
 
       scope.render = function(data) {
+
+        var issues = IssuesService.issues;
+
+        var frequency = {};
+
+        _.map(issues, function(issue) {
+          var day = moment(issue.time).format("YYYY-MM-DD");
+          if (!frequency[issue.time]) frequency[day] = [];
+          frequency[day].push(issue);
+        });
+
+
+        var days = _.keys(frequency);
+        for (var i = 0; i < days; i++) {
+          var day = days[i];
+          _.map(issues, function(issue) {
+            if (frequency[day].indexOf(issue) > -1) return;
+            if (!issue.solved && +issue.time > +(new Date(day))) frequency[day].push(issue);
+            if (+issue.solvedTime < +(new Date(day))) frequency[day].push(issue);
+            return;
+          })
+        }
+
+        console.log("freq", frequency);
+
+
         var arrData = [
-          ["2012-10-02",200],
-          ["2012-10-09", 300],
-          ["2012-10-12", 150]];
+          ["2012-10-01",1],
+          ["2012-10-02", 2],
+          ["2012-10-04", 3],
+          ["2012-10-05", 2],
+          ["2012-10-06", 1],
+          ["2012-10-07", 0],
+          ["2012-10-08", 2],
+          ["2012-10-10", 0]];
 
         var margin = {top: 20, right: 20, bottom: 30, left: 50},
           width = 730 - margin.left - margin.right,
@@ -124,10 +163,12 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
           .ticks(2);
 
         var line = d3.svg.line()
+          .interpolate('step-after')
           .x(function(d) { return x(d.date); })
           .y(function(d) { return y(d.close); });
 
         var area = d3.svg.area()
+          .interpolate('step-after')
           .x(function(d) { return x(d.date); })
           .y0(height)
           .y1(function(d) { return y(d.close); });
@@ -196,6 +237,8 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
     }
   }
 });
+
+
 
 
 dashboard.directive('ngEnter', function () {
