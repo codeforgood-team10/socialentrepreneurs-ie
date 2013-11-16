@@ -13,3 +13,7 @@
 	position:relative;
 	top: 3px;
 }
+
+.simple-list {
+	list-style-type:none;
+}

@@ -44,6 +44,34 @@
           </g>
         </svg>
 		</div>
+
+		<div class="box" id="milestone" ng-controller="MilestoneController">
+
+			<h4> Milestones</h4>
+
+			<ul class="inside simple-list">
+				<li>
+					<input type="checkbox">
+					<input type="text" placeholder="Add a new milestone" ng-model="newMilestone.text" ng-enter="addMilestone(newMilestone)">
+				</li>
+				<li ng-repeat="milestone in milestoneService.milestone | orderBy:'time':true">
+					<input type="checkbox" ng-click="completeMilestone($index)">
+					{{milestone.text}} 
+				</li>
+			</ul>
+
+			<h4> Solved Milestones</h4>
+
+			<ul class="inside simple-list">
+				<li ng-repeat="milestone in milestoneService.solvedMilestone | orderBy:'time':true">
+					<input type="checkbox" checked>
+					{{milestone.text}}
+				</li>
+			</ul>
+
+		</div>
+
+
 	</div>
 </div>
 
