@@ -35,7 +35,7 @@ dashboard.filter('fromNow', function () {
   };
 });
 
-dashboard.directive('d3Issues', function($window) {
+dashboard.directive('d3Issues', function($window, IssuesService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -47,12 +47,7 @@ dashboard.directive('d3Issues', function($window) {
       };
 
       // hard-code data
-      scope.data = [
-        {name: "Greg", score: 98},
-        {name: "Ari", score: 96},
-        {name: 'Q', score: 75},
-        {name: "Loser", score: 48}
-      ];
+      scope.data = IssuesService.issues;
 
       // Watch for resize event
       scope.$watch(function() {
@@ -61,33 +56,43 @@ dashboard.directive('d3Issues', function($window) {
         scope.render(scope.data);
       });
 
-      var margin = {top: 20, right: 20, bottom: 30, left: 50},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-      var parseDate = d3.time.format("%d-%b-%y").parse;
-
-      var x = d3.time.scale()
-        .range([0, width]);
-
-      var y = d3.scale.linear()
-        .range([height, 0]);
-
-      var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
-
-      var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
-
-      var area = d3.svg.area()
-        .x(function(d) { return x(d.date); })
-        .y0(height)
-        .y1(function(d) { return y(d.close); });
-
       scope.render = function(data) {
-        // remove all previous items before render
+        var arrData = [
+          ["2012-10-02",200],
+          ["2012-10-09", 300],
+          ["2012-10-12", 150]];
+
+        var margin = {top: 20, right: 20, bottom: 30, left: 50},
+          width = 730 - margin.left - margin.right,
+          height = 120 - margin.top - margin.bottom;
+
+        var parseDate = d3.time.format("%Y-%m-%d").parse;
+
+
+        var x = d3.time.scale()
+          .range([0, width])
+
+        var y = d3.scale.linear()
+          .range([height, 0]);
+
+        var xAxis = d3.svg.axis()
+          .scale(x)
+          .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+          .scale(y)
+          .orient("left")
+          .ticks(2);
+
+        var line = d3.svg.line()
+          .x(function(d) { return x(d.date); })
+          .y(function(d) { return y(d.close); });
+
+        var area = d3.svg.area()
+          .x(function(d) { return x(d.date); })
+          .y0(height)
+          .y1(function(d) { return y(d.close); });
+
 
         var svg = d3.select(element[0]).append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -95,28 +100,59 @@ dashboard.directive('d3Issues', function($window) {
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-          x.domain(d3.extent(data, function(d) { return d.date; }));
-          y.domain([0, d3.max(data, function(d) { return d.close; })]);
+        var data = arrData.map(function(d) {
+          return {
+            date: parseDate(d[0]),
+            close: d[1]
+          };
 
-          svg.append("path")
-            .datum(data)
-            .attr("class", "area")
-            .attr("d", area);
+        });
 
-          svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+        console.log(data);
 
-          svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Price ($)");
+
+        x.domain(d3.extent(data, function(d) { return d.date; }));
+        y.domain(d3.extent(data, function(d) { return d.close; }));
+
+        svg.append("clipPath")
+          .attr("id", "clip")
+          .append("rect")
+          .attr("width", width)
+          .attr("height", height);
+
+        // Add the area path.
+        svg.append("path")
+          .attr("class", "area")
+          .attr("clip-path", "url(#clip)")
+          .attr("d", area(data));
+
+        // Add the x-axis.
+        svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+        // Add the y-axis.
+        svg.append("g")
+          .attr("class", "y axis")
+          .attr("transform", "translate(" + 0 + ",0)")
+          .call(yAxis);
+
+        // Add the line path.
+        svg.append("path")
+          .datum(data)
+          .attr("class", "line")
+          .attr("d", line);
+
+        var points = svg.selectAll(".point")
+          .data(data)
+          .enter().append("svg:circle")
+          .attr("class", 'point')
+          .attr("fill", function(d, i) { return "black" })
+          .attr("cx", function(d, i) { return x(d.date) })
+          .attr("cy", function(d, i) { return y(d.close) })
+          .attr("r", function(d, i) { return 6 });
+
       }
     }
   }

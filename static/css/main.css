@@ -1,15 +1,48 @@
 #issues {
 }
-#issues line {
+#issues .bubbles line {
    stroke:#D9534F;
    stroke-width:10;
 }
-#issues circle {
+#issues .bubbles circle {
    fill:#D9534F;
+}
+
+#issues .chart .line {
+    fill: none;
+    stroke: #D9534F;
+    stroke-width: 5px;
+}
+#issues .chart .point {
+    stroke: #D9534F;
+    stroke-width: 5px;
+    fill: #D9534F;
+}
+
+#issues .chart .point:hover {
+    fill: #dfdfdf;
+}
+
+#issues path.area {
+    fill: #FFCAC8;
 }
 
 .close.inline-close {
 	float:none;
 	position:relative;
 	top: 3px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #dfdfdf;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    fill: #959595;
+}
+
+.x.axis path {
+    display: none;
 }

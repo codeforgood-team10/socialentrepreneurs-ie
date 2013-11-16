@@ -21,7 +21,7 @@
 
 			<h4 class="align-center">Issues</h4>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="content" ng-attr-height="{{  (issuesService.issues.length+1) * 50 }}">
+        <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{  (issuesService.issues.length+1) * 50 }}">
           <g>
             <line ng-attr-x1="{{ 40/2 }}" y1="1" ng-attr-x2="{{ 40/2 }}" ng-attr-y2="{{ (issuesService.issues.length+1) * 50 - 20 }}"/>
           </g>
@@ -45,7 +45,7 @@
           </g>
         </svg>
 
-      <div d3-issues></div>
+      <div class="chart" d3-issues></div>
 		</div>
 	</div>
 </div>
