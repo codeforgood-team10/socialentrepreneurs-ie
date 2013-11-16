@@ -1,9 +1,9 @@
 #issues {
 }
 #issues line {
-   stroke:rgb(255,0,0);
+   stroke:#D9534F;
    stroke-width:10;
 }
 #issues circle {
-
+   fill:#D9534F;
 }
