@@ -135,34 +135,46 @@
 		<div class="box" id="cashflow" ng-controller="CashflowController">
       <h4>Cashflow</h4>
       <div class="chart" d3-cashflow></div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ cashflowService.cashflow.length * 50 }}">
+      <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (cashflowService.cashflow.length+1) * 50 }}">
 
         <line
             class="lineMilestonePast"
             ng-attr-x1="{{ 40/2 }}"
             y1="1"
             ng-attr-x2="{{ 40/2 }}"
-            ng-attr-y2="{{ cashflowService.cashflow.length * 50 - 20 }}">
+            ng-attr-y2="{{ (cashflowService.cashflow.length+1) * 50 - 20 }}">
         </line>
+
+        <g>
+          <circle class="circleCashflow" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
+          <foreignobject x="50" ng-attr-y="{{ 7 }}" width="100%" height="180">
+            <input
+                ng-model="money.text"
+                ng-enter="add()"
+                class="currencyFont moneyInputForm ng-class: {positive: money.text>0, negative:money.text<0, neutral:money.text==0};"/>
+            Reason:
+            <input ng-model="descr.text" ng-enter="add()" class="explanationInputForm"/>          </foreignobject>
+
+        </g>
 
         <g ng-repeat="cash in cashflowService.cashflow | orderBy:'time':true">
           <circle
               class="circleCashflow"
               ng-click="toggle(cash)"
               cx="20"
-              ng-attr-cy="{{ calculateCircleY($index) }}"
+              ng-attr-cy="{{ calculateCircleY($index+1) }}"
               r="20">
           </circle>
           <circle
               class="circleHole"
               ng-click="toggle(cash)"
               cx="20"
-              ng-attr-cy="{{ calculateCircleY($index) }}"
+              ng-attr-cy="{{ calculateCircleY($index+1) }}"
               ng-attr-r=" {{ 20 - 5 }}">
           </circle>
           <foreignobject
               x="10"
-              ng-attr-y="{{ calculateCircleY($index) -14   }}"
+              ng-attr-y="{{ calculateCircleY($index+1) -14   }}"
               width="100%"
               height="180">
             <span class="arrow positive" ng-show="cash.value>0">&#x25B2;</span>
@@ -170,7 +182,7 @@
           </foreignobject>
           <foreignobject
               x="50"
-              ng-attr-y="{{ calculateCircleY($index) -10 }}"
+              ng-attr-y="{{ calculateCircleY($index+1) -10 }}"
               width="100%"
               height="180">
             <span class="moneyValue currencyFont ng-class: {positive: cash.value>0, negative:cash.value<0, neutral:cash.value==0};">
@@ -182,18 +194,6 @@
         </g>
       </svg>
 
-			<ul class="simple-list">
-				<li>
-					<input 
-						ng-model="money.text" 
-						ng-enter="add()"
-						class="currencyFont moneyInputForm ng-class: {positive: money.text>0, negative:money.text<0, neutral:money.text==0};"
-					</input>
-					Reason: 
-					<input ng-model="descr.text" ng-enter="add()" class="explanationInputForm"></input>
-				</li>
-
-			</ul>
 		</div>
 
 

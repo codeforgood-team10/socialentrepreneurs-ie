@@ -22,13 +22,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.65692824">
+    <splitter split-orientation="horizontal" split-proportion="0.56510854">
       <split-first>
         <leaf>
           <file leaf-file-name="user.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="133" column="8" selection-start="5045" selection-end="5045" vertical-scroll-proportion="0.7887324">
+                <state line="155" column="88" selection-start="6062" selection-end="6062" vertical-scroll-proportion="0.6619718">
                   <folding>
                     <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -52,7 +52,7 @@
           <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="150" column="17" selection-start="1967" selection-end="1967" vertical-scroll-proportion="-8.846154">
+                <state line="159" column="16" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-97.84615">
                   <folding />
                 </state>
               </provider>
@@ -70,7 +70,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="137" column="11" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.45869946">
+                <state line="251" column="21" selection-start="7181" selection-end="7181" vertical-scroll-proportion="0.59560066">
                   <folding />
                 </state>
               </provider>
@@ -417,21 +417,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="17" selection-start="1967" selection-end="1967" vertical-scroll-proportion="-8.846154">
+        <state line="159" column="16" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-97.84615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="11" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.45869946">
+        <state line="251" column="21" selection-start="7181" selection-end="7181" vertical-scroll-proportion="0.59560066">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="8" selection-start="5045" selection-end="5045" vertical-scroll-proportion="0.7887324">
+        <state line="155" column="88" selection-start="6062" selection-end="6062" vertical-scroll-proportion="0.6619718">
           <folding>
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
