@@ -13,7 +13,22 @@ dashboard.service('IssuesService', function() {
 /*==================
 AngularJS Issues
 ==================*/
+dashboard.controller('UsersList', function($http, $scope) {
+  $http.get("http://localhost:8080/seicfg-web/users").then(function(response) {
+    $scope.users = response.data;
+  }, function(err) {
+    console.log(err);
+  });
 
+  $scope.create = function(newUser) {
+    $http.post("http://localhost:8080/seicfg-web/users/add", newUser).then(function(response) {
+      console.log(response);
+      $scope.users.push(response.data);
+    }, function(err) {
+      console.log(err);
+    })
+  }
+})
 dashboard.controller('IssuesController', function($scope, IssuesService, $filter){
 	$scope.newIssue = {};
 	$scope.issuesService = IssuesService;

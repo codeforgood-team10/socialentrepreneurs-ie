@@ -1,0 +1,30 @@
+<html ng-app="dashboard">
+  <head>
+    <title>Entrepreneur dashboard</title>
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src="components/d3/d3.min.js"></script>
+    <script src="components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/moment/moment.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+  <div class="container">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h3>Entrepreneur dashboard</h3>
+      <div id="listOfUsers" ng-controller="UsersList">
+        <ul>
+          <li ng-repeat="user in users">{{ user.emailId }}</li>
+          <li>
+            <input type="text" placeholder="email" ng-model="newUser.emailid"><input type="text" placeholder="pass" ng-model="newUser.password"><input type="text" placeholder="client" ng-model="newUser.type">
+            <button ng-click="create(newUser)">Create</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

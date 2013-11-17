@@ -99,7 +99,7 @@
 }
 
 .lineMilestonePast {
-	stroke:#99cc32;
+	stroke:#5CB85C;
 	stroke-width:10;
 }
 
@@ -144,7 +144,6 @@
 .currencyFont {
 	font-family: "Comic Sans MS" Arial;
 	font-weight:bold;
-	font-size: 16px;
 	text-align: right;
 }
 
