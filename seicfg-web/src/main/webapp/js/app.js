@@ -45,6 +45,7 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
 
 		newIssue.time = new Date();
     newIssue.solved = false;
+    newIssue.solvedTime = false;
 		IssuesService.issues.push(newIssue);
 		$scope.newIssue = newIssue = {};
 	}
@@ -233,19 +234,26 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         for (var i = 0; i < days.length; i++) {
           var day = days[i];
           _.map(issues, function(issue) {
+            console.log("new data", day, issue,
+              frequency[day].indexOf(issue) > -1,
+              !issue.solved && issue.time < +(new Date(day)),
+              moment(issue.time).format("YYYY-MM-DD") == day
+            );
             if (frequency[day].indexOf(issue) > -1) return;
             if (!issue.solved && +issue.time < +(new Date(day))) frequency[day].push(issue);
+            else if (!issue.solved && moment(issue.time).format("YYYY-MM-DD") == day) frequency[day].push(issue);
             if (issue.solved && +issue.time < +(new Date(day)) && +issue.solvedTime > +(new Date(day))) frequency[day].push(issue);
             return;
           })
         }
+
+
         return _.sortBy(_.pairs(frequency), function(d) {
           return d[0];
         })
       }
 
       scope.render = function(data) {
-
 
         var margin = {top: 20, right: 20, bottom: 30, left: 50},
           width = 730 - margin.left - margin.right,
