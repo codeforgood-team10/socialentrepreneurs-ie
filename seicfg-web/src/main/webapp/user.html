@@ -19,6 +19,26 @@
 	<div class="col-lg-8 col-lg-offset-2">
 		<h3><img id="logo" src="http://socialentrepreneurs.ie/wp-content/themes/sei/images/logo.png">Entrepreneur dashboard</h3>
 		<hr>
+
+		<div class="box" id="status" ng-controller="StatusController">
+
+			<ul>
+				<li class="status-input">
+					<textarea 
+						ng-model="newStatus.text" 
+						class="form-control">
+					</textarea>
+
+					<button ng-click="add(newStatus)" class="inside-submit btn btn-info" id="statusSubmitButton"> Submit </button>
+				</li>
+				<li ng-repeat="status in statuses | orderBy:'time':true">
+					{{ status.text }}
+				</li>
+			</ul>
+
+		</div>
+
+
 		<div class="box" id="issues" ng-controller="IssuesController">
 
 			<h4 class="align-center">Issues ({{ unsolved.length || 0 }})</h4>
