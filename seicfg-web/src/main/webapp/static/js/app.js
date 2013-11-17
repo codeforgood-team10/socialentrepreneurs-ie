@@ -281,6 +281,12 @@ dashboard.filter('fromNow', function () {
   };
 });
 
+dashboard.filter('timeYMD', function () {
+  return function (dateString) {
+    return moment(new Date(dateString)).format("YYYY-MM-DD");
+  };
+});
+
 dashboard.directive('d3Issues', function($window, IssuesService) {
   return {
     restrict: 'EA',

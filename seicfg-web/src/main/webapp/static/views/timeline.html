@@ -2,7 +2,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (timeline.length) * 50 }}">
 
     <line
-        class="lineMilestonePast"
+        class="greyLine"
         ng-attr-x1="{{ 40/2 }}"
         y1="1"
         ng-attr-x2="{{ 40/2 }}"
@@ -17,13 +17,7 @@
           ng-attr-cy="{{ calculateCircleY($index+1) }}"
           r="20">
       </circle>
-      <circle
-          class="circleHole"
-          ng-click="toggle(cash)"
-          cx="20"
-          ng-attr-cy="{{ calculateCircleY($index+1) }}"
-          ng-attr-r=" {{ 20 - 5 }}">
-      </circle>
+
       <foreignobject
           x="10"
           ng-attr-y="{{ calculateCircleY($index+1) -14   }}"
@@ -37,6 +31,7 @@
           ng-attr-y="{{ calculateCircleY($index+1) -10 }}"
           width="100%"
           height="180">
+        <span class="label" ng-class="{'label-info': entry.type == 'cash', 'label-danger': entry.type == 'issue', 'label-warning': entry.type == 'mile' && entry.action == 'created', 'label-success': entry.type == 'mile' && entry.action == 'solved'}">{{ entry.time | timeYMD }}</span>
         {{ entry }}
       </foreignobject>
     </g>
