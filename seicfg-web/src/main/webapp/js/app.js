@@ -16,6 +16,8 @@ dashboard.controller('StatusController', function($scope, StatusService) {
     ];
   $scope.statusService = StatusService;
 
+  $scope.showAll = 0;
+
   $scope.add = function(status) {
     console.log ("got here");
 
@@ -27,7 +29,14 @@ dashboard.controller('StatusController', function($scope, StatusService) {
     status = {};
     $scope.newStatus = {};
   }
+
+  $scope.triggerShow = function() {
+    console.log ("Triggered")
+    $scope.showAll = ! $scope.showAll;
+  }
 });
+
+
 
 /*==================
 AngularJS Issues
