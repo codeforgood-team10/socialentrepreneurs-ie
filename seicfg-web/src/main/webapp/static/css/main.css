@@ -43,7 +43,7 @@
    stroke:#D9534F;
    stroke-width:10;
 }
-#issues .bubbles circle {
+#issues .bubbles circle, .circleIssue {
    fill:#D9534F;
 }
 

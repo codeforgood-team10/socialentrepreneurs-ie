@@ -1,3 +1,44 @@
-<div id="timeline">
-  YEY
+<div id="timeline" ng-controller="Timeline">
+  <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (timeline.length) * 50 }}">
+
+    <line
+        class="lineMilestonePast"
+        ng-attr-x1="{{ 40/2 }}"
+        y1="1"
+        ng-attr-x2="{{ 40/2 }}"
+        ng-attr-y2="{{ (timeline.length) * 50 - 20 }}">
+    </line>
+
+    <g ng-repeat="entry in timeline | orderBy:'time':true">
+      <circle
+          ng-class="{circleCashflow: entry.type == 'cash', circleIssue: entry.type == 'issue', circleMilestoneFuture: entry.type == 'mile' && entry.action == 'created', circleMilestonePast: entry.type == 'mile' && entry.action == 'solved'}"
+          ng-click="toggle(cash)"
+          cx="20"
+          ng-attr-cy="{{ calculateCircleY($index+1) }}"
+          r="20">
+      </circle>
+      <circle
+          class="circleHole"
+          ng-click="toggle(cash)"
+          cx="20"
+          ng-attr-cy="{{ calculateCircleY($index+1) }}"
+          ng-attr-r=" {{ 20 - 5 }}">
+      </circle>
+      <foreignobject
+          x="10"
+          ng-attr-y="{{ calculateCircleY($index+1) -14   }}"
+          width="100%"
+          height="180">
+        <span class="arrow positive" ng-show="cash.value>0">&#x25B2;</span>
+        <span class="arrow negative" ng-show="cash.value<0">&#x25BC;</span>
+      </foreignobject>
+      <foreignobject
+          x="50"
+          ng-attr-y="{{ calculateCircleY($index+1) -10 }}"
+          width="100%"
+          height="180">
+        {{ entry }}
+      </foreignobject>
+    </g>
+  </svg>
 </div>

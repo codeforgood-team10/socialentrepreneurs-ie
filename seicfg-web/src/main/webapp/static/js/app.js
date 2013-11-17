@@ -15,6 +15,38 @@ dashboard.config(function($routeProvider, $locationProvider) {
 dashboard.controller('Link', function($scope) {
 })
 
+dashboard.controller('Timeline', function($scope, IssuesService, StatusService, MilestoneService, CashflowService) {
+  var timeline = [];
+
+  for (var i in IssuesService.issues) {
+    var issue = IssuesService.issues[i];
+    timeline.push({type:"issue", action:"created", time:issue.time, obj:issue});
+    if (issue.solved) timeline.push({type:"issue", action:"solved", time:issue.time, obj:issue});
+  }
+
+  for (var i in MilestoneService.milestone) {
+    var mile = MilestoneService.milestone[i];
+    timeline.push({type:"mile", action:"created", time:mile.time, obj:mile});
+    if (mile.solved) timeline.push({type:"mile", action:"solved", time:issue.time, obj:issue});
+  }
+
+  for (var i in CashflowService.cashflow) {
+    var cash = CashflowService.cashflow[i];
+    timeline.push({type:"cash", action:"created", time:cash.time, obj:cash});
+  }
+  $scope.timeline = timeline;
+
+  console.log(timeline)
+
+  $scope.calculateCircleX = function(index) {
+    return 50;
+  }
+  $scope.calculateCircleY = function(index) {
+    return (index * 50) +20;
+  }
+
+});
+
 /*=================
 AngularJS Status
 =================*/
