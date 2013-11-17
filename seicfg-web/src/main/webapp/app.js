@@ -21,6 +21,10 @@ app.get('/', function(req, res) {
   res.render('../static/user.html');
 });
 
+app.get('/admin', function(req, res) {
+  res.render('../static/admin.html');
+});
+
 
 var port = process.env.PORT || 1200;
 var server = http.createServer(app).listen(port, function () {
