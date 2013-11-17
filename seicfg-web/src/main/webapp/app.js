@@ -1,8 +1,17 @@
 var express        = require("express");
+
+var __             = require("underscore");
 var async          = require("async");
 var ejs            = require("ejs");
+var RedisStore     = require("connect-redis")(express);
+
 var http           = require('http');
 var util           = require('util');
+
+var passport       = require("./classes/passport");
+var auth           = require("./classes/auth");
+var store          = require('./classes/store').Redis;
+var common        = require('./routes/common');
 var app = module.exports = express();
 
 app.configure(function () {
@@ -11,8 +20,11 @@ app.configure(function () {
   app.engine("html", ejs.renderFile);
   app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + "/static/uploads" }));
   app.use(express.cookieParser("This is the answer you are looking for %&$!$%$"));
+  app.use(express.session({ store: new RedisStore({client: store}) }));
   app.use(express.methodOverride());
   app.use(express.static(__dirname + "/static"));
+  app.use(passport.initialize());
+  app.use(passport.session());
   app.use(app.router);
 });
 

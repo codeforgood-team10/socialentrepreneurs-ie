@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761f83f8-7271-4512-8a41-098dd6adb40b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/passport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/models/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/routes/common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/package.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/package.json" />
     </list>
     <ignored path="socialentrepreneursie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +45,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="219" column="0" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.11675127">
+                <state line="219" column="0" selection-start="6557" selection-end="6557" vertical-scroll-proportion="5.928934">
                   <folding />
                 </state>
               </provider>
@@ -69,10 +73,55 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="29" selection-start="815" selection-end="815" vertical-scroll-proportion="0.6223663">
+                <state line="12" column="54" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="auth.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/auth.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="passport.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/passport.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="33" column="26" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/models/user.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="26" selection-start="306" selection-end="306" vertical-scroll-proportion="0.02631579">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="store.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/store.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/routes/common.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -129,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/static/js/app.js" />
-        <option value="$PROJECT_DIR$/static/css/main.css" />
-        <option value="$PROJECT_DIR$/static/user.html" />
-        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
@@ -143,7 +188,12 @@
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/auth.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/passport.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/store.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/routes/common.js" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/models/user.js" />
       </list>
     </option>
   </component>
@@ -375,6 +425,96 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seicfg-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seicfg-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socialentrepreneursie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seicfg-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -434,7 +574,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1381295" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16906475" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -550,9 +690,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/routes/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="815" selection-end="815" vertical-scroll-proportion="0.6223663">
+        <state line="12" column="54" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/classes/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="26" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="26" selection-start="306" selection-end="306" vertical-scroll-proportion="0.02631579">
           <folding />
         </state>
       </provider>
