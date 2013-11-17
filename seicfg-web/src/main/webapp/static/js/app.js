@@ -45,6 +45,33 @@ dashboard.controller('Timeline', function($scope, IssuesService, StatusService, 
     return (index * 50) +20;
   }
 
+  $scope.generateSentence = function(entry) {
+
+    var text = "";
+    if (entry.type == 'cash' && 'created') {
+      console.log(entry);
+      text += "€" + (+entry.obj.value) + " have been " + ((+entry.obj.cash > 0) ? "added to" : "subtracted from") + " cashflow ";
+      if (entry.obj.detail) text += "with the reason:" + "\""+ entry.obj.detail + "\"";
+    }
+
+    else if (entry.type == 'issue' && 'created') {
+      console.log(entry);
+      if (entry.obj.solved) text += "Solved ";
+      text += "\""+entry.obj.text+"\"";
+      if (!entry.obj.solved) text += " and still not solved!";
+    }
+
+    else if (entry.type == 'mile' && 'created') {
+      console.log(entry);
+      if (entry.obj.solved) text += "Achieved milestone ";
+      text += "\""+entry.obj.text+"\"";
+      if (!entry.obj.solved) text += " and still not achieved!";
+    }
+
+    return text;
+
+  }
+
 });
 
 /*=================

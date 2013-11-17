@@ -1,8 +1,13 @@
 package uk.seicfg.rest;
 
+import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import uk.seicfg.service.UpdateService;
+import uk.seicfg.service.UserService;
 import uk.seicfg.to.Message;
 import uk.seicfg.to.Update;
 import uk.seicfg.util.converter.UpdateConverter;
@@ -24,7 +30,10 @@ public class UpdateResource extends AbstractResource{
 
 	@Autowired
 	private UpdateService updateService;
-	
+
+	@Autowired
+	private UserService userService;
+
 	private UpdateConverter updateConverter = new UpdateConverter();
 	protected static final Logger LOG = LoggerFactory.getLogger(UpdateResource.class);
 	
@@ -57,17 +66,35 @@ public class UpdateResource extends AbstractResource{
 		}
 		
 		@RequestMapping(value="updates/add", method = RequestMethod.POST, produces = "application/json")
-		@ResponseBody
-		public Update create(String text, String type) {
+		public @ResponseBody Update create(@RequestBody String updatedata) {
 			LOG.info("UpdateResource <- create()");
-			Update update = new Update();
+			HashMap<String, Object> result;
 			try {
+				result = new ObjectMapper().readValue(updatedata, HashMap.class);
+				String type = result.get("type").toString();
+				String value = result.get("value").toString();
+				String status = result.get("status").toString();
+				String remarks = result.get("remarks").toString();
+				
+				Update update = new Update();
 				update.setType(type);
-				update.setValue(text);
+				update.setValue(value);
+				update.setRemarks(remarks);
+				update.setStatus(status);
 				prepareUpdateObject(update);
 				return updateService.createUpdate(updateConverter.convertTo(update));
-			} catch (Exception e) {
-				//TODO proper error update display
+				
+			} catch (JsonParseException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (JsonMappingException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}catch (Exception e) {
+				//TODO proper error message display
 				e.printStackTrace();
 			}
 			return null;
@@ -81,11 +108,11 @@ public class UpdateResource extends AbstractResource{
 		}
 		
 		private Update prepareUpdateObject(Update update){
-			update.setCreatedby("0");
+			update.setCreatedby("1");
 			update.setCreationDateTime((new Date()).toString());
 			update.setLastModifiedDate((new Date()).toString());
 			update.setModifiedby("1");
-			update.setRemarks("");
+			update.setUser(userService.getUser("1"));
 			return update;
 		}
 		

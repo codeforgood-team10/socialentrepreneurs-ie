@@ -181,6 +181,10 @@
 	padding: 0 5px;
 }
 
+#status {
+    padding-left:20px;
+}
+
 .status-input {
     position:relative;
     display: inline-block;
@@ -213,11 +217,20 @@
 }
 
 .status-item { 
-    background-color:yellow;
 
-    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 
-    border: 2px solid red;
+    background-color: #5CB85C;
+
+    padding: 10px 20px;
+
+    margin-bottom:5px;
+
+    overflow:hidden;
+
+    color:white;
 }
 
 .brand {
@@ -232,7 +245,19 @@
     overflow: hidden;
 }
 
+
 .greyLine {
     stroke: #dfdfdf;
     stroke-width: 9px;
+}
+.shown {
+    display: block;
+}
+
+.hidden {
+    display:none;
+}
+
+.animation-transition: before {
+    content: "asd";
 }
