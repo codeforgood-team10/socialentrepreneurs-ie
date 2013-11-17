@@ -36,7 +36,6 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
   $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
 	$scope.delete = function(issue) {
     var index = IssuesService.issues.indexOf(issue);
-		console.log(index);
 		IssuesService.issues.splice(index, 1);
 	}
 
@@ -121,7 +120,7 @@ dashboard.controller('CashflowController', function($scope, CashflowService){
 
 		if (!money || !descr) return;
 
-		newSum = {
+		var newSum = {
 			detail: descr,
 			value: money,
 			time: new Date()
@@ -131,6 +130,19 @@ dashboard.controller('CashflowController', function($scope, CashflowService){
 
 		$scope.money = {};
 		$scope.descr = {};
+	}
+
+	$scope.isCashPostitive = function() { 
+		console.log("got called");
+		return $scope.money > 0;
+	}
+
+	$scope.isCashNegative = function() { 
+		return $scope.money < 0;
+	}
+
+	$scope.isCashZero = function() { 
+		return $scope.money == 0;
 	}
 
 
@@ -195,7 +207,6 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
             return;
           })
         }
-        console.log(frequency);
         return _.sortBy(_.pairs(frequency), function(d) {
           return d[0];
         })
@@ -249,7 +260,6 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         var data = calculate_frequency(data);
 
         var circlePoints = _.filter(data, function(issues){
-          console.log("issues", issues[1]);
           var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
           return !allTheSolved;
         }).map(function(d) {
@@ -260,7 +270,6 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         });
 
         var ticksPoints = _.filter(data, function(issues){
-          console.log("issues", issues[1]);
           var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
           return allTheSolved;
         }).map(function(d) {
@@ -278,7 +287,6 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
 
         });
 
-        console.log(linePoints);
 
 
         x.domain(d3.extent(linePoints, function(d) { return d.date; }));
@@ -386,7 +394,6 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
             return;
           })
         }
-        console.log(frequency);
         return _.sortBy(_.pairs(frequency), function(d) {
           return d[0];
         })
@@ -440,7 +447,6 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
         var data = calculate_frequency(data);
 
         var circlePoints = _.filter(data, function(issues){
-          console.log("issues", issues[1]);
           var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
           return !allTheSolved;
         }).map(function(d) {
@@ -451,7 +457,6 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
           });
 
         var ticksPoints = _.filter(data, function(issues){
-          console.log("issues", issues[1]);
           var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
           return allTheSolved;
         }).map(function(d) {
@@ -469,7 +474,6 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
 
         });
 
-        console.log(linePoints);
 
 
         x.domain(d3.extent(linePoints, function(d) { return d.date; }));

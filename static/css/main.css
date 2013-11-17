@@ -103,3 +103,41 @@
 .strike {
     text-decoration:line-through;
 }
+
+.positive {
+	color:blue;
+}
+
+.negative {
+	color:red;
+}
+
+.neutral {
+	color:black;
+}
+
+.currencyFont {
+	font-family: "Comic Sans MS" Arial;
+	font-weight:bold;
+	font-size: 16px;
+	text-align: right;
+}
+
+.moneyInputForm {
+	border:none;
+	border-bottom:2px dashed;
+	outline-width:0;
+
+	width:100px;
+}
+
+.explanationInputForm {
+	border:none;
+	border-bottom:2px solid;
+	outline-width: 0;
+	overflow: visible;
+}
+
+.cashflow td {
+	padding: 0 5px;
+}

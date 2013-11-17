@@ -134,13 +134,20 @@
 		<div class="box" id="cashflow" ng-controller="CashflowController">
 			<ul class="simple-list">
 				<li>
-					<input ng-model="money.text" ng-enter="add()"></input>
-					<input ng-model="descr.text" ng-enter="add()"></input>
+					<input 
+						ng-model="money.text" 
+						ng-enter="add()"
+						class="currencyFont moneyInputForm ng-class: {positive: money.text>0, negative:money.text<0, neutral:money.text==0};"
+					</input>
+					Reason: 
+					<input ng-model="descr.text" ng-enter="add()" class="explanationInputForm"></input>
 				</li>
 
-				<table>
+				<table class="cashflow">
 					<tr ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true">
-						<td> {{ entry.value }} </td>
+						<td class="moneyValue currencyFont ng-class: {positive: entry.value>0, negative:entry.value<0, neutral:entry.value==0};"> 
+							{{ entry.value }} 
+						</td>
 						<td> {{ entry.detail }} </td>
 					</tr>
 				</table>
