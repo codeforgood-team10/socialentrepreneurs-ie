@@ -30,17 +30,21 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
 		newIssue.time = new Date();
     newIssue.solved = false;
 		IssuesService.issues.push(newIssue);
-    $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
 		$scope.newIssue = newIssue = {};
 	}
 
   $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
-	$scope.delete = function(index) {
+	$scope.delete = function(issue) {
+    var index = IssuesService.issues.indexOf(issue);
 		console.log(index);
-		issueListSize = IssuesService.issues.length;
-		IssuesService.issues.splice(issueListSize - index - 1, 1);
+		IssuesService.issues.splice(index, 1);
 	}
-})
+
+  $scope.$watchCollection('issuesService.issues', function(issuesService) {
+    $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
+  })
+
+});
 
 
 x = {};
@@ -167,9 +171,13 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         var frequency = {};
 
         _.map(issues, function(issue) {
-          var day = moment(issue.time).format("YYYY-MM-DD");
-          if (!frequency[issue.time]) frequency[day] = [];
-          frequency[day].push(issue);
+          var time = moment(issue.time).format("YYYY-MM-DD");
+          if (!frequency[issue.time]) frequency[time] = [];
+          if (issue.solved && !frequency[issue.solvedTime]) {
+            var solvedTime = moment(issue.solvedTime).format("YYYY-MM-DD");
+            frequency[solvedTime] = [];
+          }
+          frequency[time].push(issue);
         });
 
 
@@ -179,12 +187,12 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
           var day = days[i];
           _.map(issues, function(issue) {
             if (frequency[day].indexOf(issue) > -1) return;
-            if (!issue.solved && +issue.time <= +(new Date(day))) frequency[day].push(issue);
-            if (issue.solved && +issue.time <= +(new Date(day)) && +issue.solvedTime >= +(new Date(day))) frequency[day].push(issue);
+            if (!issue.solved && +issue.time < +(new Date(day))) frequency[day].push(issue);
+            if (issue.solved && +issue.time < +(new Date(day)) && +issue.solvedTime > +(new Date(day))) frequency[day].push(issue);
             return;
           })
         }
-
+        console.log(frequency);
         return _.sortBy(_.pairs(frequency), function(d) {
           return d[0];
         })
@@ -192,7 +200,6 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
 
       scope.render = function(data) {
 
-        data = calculate_frequency(data);
 
         var margin = {top: 20, right: 20, bottom: 30, left: 50},
           width = 730 - margin.left - margin.right,
@@ -236,7 +243,31 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var data = data.map(function(d) {
+        var data = calculate_frequency(data);
+
+        var circlePoints = _.filter(data, function(issues){
+          console.log("issues", issues[1]);
+          var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
+          return !allTheSolved;
+        }).map(function(d) {
+          return {
+            date: parseDate(d[0]),
+            close: d[1].length
+          };
+        });
+
+        var ticksPoints = _.filter(data, function(issues){
+          console.log("issues", issues[1]);
+          var allTheSolved = _.all(issues[1], function(issue) { return issues[0] != moment(issue.time).format("YYYY-MM-DD")});
+          return allTheSolved;
+        }).map(function(d) {
+            return {
+              date: parseDate(d[0]),
+              close: d[1].length
+            };
+          });
+
+        var linePoints = data.map(function(d) {
           return {
             date: parseDate(d[0]),
             close: d[1].length
@@ -244,11 +275,11 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
 
         });
 
-        console.log(data);
+        console.log(linePoints);
 
 
-        x.domain(d3.extent(data, function(d) { return d.date; }));
-        y.domain(d3.extent(data, function(d) { return d.close; }));
+        x.domain(d3.extent(linePoints, function(d) { return d.date; }));
+        y.domain(d3.extent(linePoints, function(d) { return d.close; }));
 
         svg.append("clipPath")
           .attr("id", "clip")
@@ -260,7 +291,7 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
         svg.append("path")
           .attr("class", "area")
           .attr("clip-path", "url(#clip)")
-          .attr("d", area(data));
+          .attr("d", area(linePoints));
 
         // Add the x-axis.
         svg.append("g")
@@ -276,18 +307,26 @@ dashboard.directive('d3Issues', function($window, IssuesService) {
 
         // Add the line path.
         svg.append("path")
-          .datum(data)
+          .datum(linePoints)
           .attr("class", "line")
           .attr("d", line);
 
         var points = svg.selectAll(".point")
-          .data(data)
+          .data(circlePoints)
           .enter().append("svg:circle")
           .attr("class", 'point')
-          .attr("fill", function(d, i) { return "black" })
           .attr("cx", function(d, i) { return x(d.date) })
           .attr("cy", function(d, i) { return y(d.close) })
           .attr("r", function(d, i) { return 6 });
+
+        var tickPoint = svg.selectAll(".tickPoint")
+          .data(ticksPoints)
+          .enter().append("svg:text")
+          .attr("class", 'tickPoint')
+          .attr("x", function(d, i) { return x(d.date) + 10 })
+          .attr("y", function(d, i) { return y(d.close) - 10 })
+          .attr("r", function(d, i) { return 6 })
+          .text(function(d) {return "\u2714"})
 
       }
     }
