@@ -55,15 +55,6 @@ AngularJS Milestones
 dashboard.service('MilestoneService', function() {
 	this.milestone = [{text:"Issue here", time: new Date(), solved: true}, {text:"Issues 2 eye", time: new Date(), solved: false}];
 	this.solvedMilestone = [];
-
-	this.getFutureMilestoneNumber = function() {
-		return this.milestone.filter(function(val){return val.solved==false}).length;
-	}
-
-	this.getPastMilestoneNumber = function() {
-		return this.milestone.filter(function(val){return val.solved==true}).length;
-	}
-
 });
 
 dashboard.controller('MilestoneController', function($scope, MilestoneService){
@@ -102,6 +93,44 @@ dashboard.controller('MilestoneController', function($scope, MilestoneService){
 	$scope.calculateCircleY = function(index) {
 		return (index * 50) + 20;
 	}
+})
+
+/*=================
+AngularJS CashFlow
+=================*/
+
+dashboard.service('CashflowService', function() {
+	this.cashflow = [
+		{detail:"Issue here", value:"10", time: new Date()}, 
+		{detail:"Issues 2 eye", value:"-10", time: new Date()}
+	];
+});
+
+dashboard.controller('CashflowController', function($scope, CashflowService){
+	$scope.money = {};
+	$scope.descr = {};
+
+	$scope.cashflowService = CashflowService;
+
+	$scope.add = function() {
+		money = $scope.money.text;
+		descr = $scope.descr.text;
+
+		if (!money || !descr) return;
+
+		newSum = {
+			detail: descr,
+			value: money,
+			time: new Date()
+		};
+
+		CashflowService.cashflow.push(newSum);
+
+		$scope.money = {};
+		$scope.descr = {};
+	}
+
+
 })
 
 
