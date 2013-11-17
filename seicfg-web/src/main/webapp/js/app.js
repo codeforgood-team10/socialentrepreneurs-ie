@@ -133,13 +133,21 @@ dashboard.controller('MilestoneController', function($scope, MilestoneService){
 		$scope.newMilestone = newMilestone = {};
 	}
 
-	$scope.delete = function(index) {
-		milestoneListSize = MilestoneService.milestone.length;
-		MilestoneService.milestone.splice(milestoneListSize - index - 1, 1);
+	$scope.delete = function(milestone) {
+    var index = MilestoneService.milestone.indexOf(milestone);
+		MilestoneService.milestone.splice(index, 1);
 	}
 
 	$scope.toggle = function(milestone) {
 		milestone.solved = !milestone.solved;
+    var index = MilestoneService.milestone.indexOf(milestone);
+    MilestoneService.milestone[index] = angular.copy(milestone);
+
+    if (milestone.solved) {
+      milestone.solvedTime = new Date();
+    } else {
+      milestone.solvedTime = false;
+    }
 	}
 
 	$scope.calculateCircleX = function(index) {
@@ -604,8 +612,10 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
 
       // Watch for resize event
       scope.$watchCollection('milestoneService', function(data) {
+        console.log("MILESTONE CHANGING", data);
         scope.render(data);
-      });
+      }, true);
+
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
@@ -634,6 +644,7 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
           _.map(issues, function(issue) {
             if (frequency[day].indexOf(issue) > -1) return;
             if (!issue.solved && +issue.time < +(new Date(day))) frequency[day].push(issue);
+            else if (!issue.solved && moment(issue.time).format("YYYY-MM-DD") == day) frequency[day].push(issue);
             if (issue.solved && +issue.time < +(new Date(day)) && +issue.solvedTime > +(new Date(day))) frequency[day].push(issue);
             return;
           })
