@@ -19,6 +19,11 @@
     fill: #D9534F;
 }
 
+#issues .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
 #issues .chart .point:hover {
     fill: #dfdfdf;
 }
