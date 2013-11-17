@@ -1,3 +1,8 @@
+#logo {
+    width: 100px;
+    margin-right: 30px;
+}
+
 #issues {
 }
 
@@ -24,6 +29,15 @@
 #cashflow path.area {
     fill: rgba(91, 192, 222, 0.36);
 }
+
+#cashflow .bubbles line {
+    stroke:#5BC0DE;
+    stroke-width:10;
+}
+.circleCashflow {
+    fill:#5BC0DE;
+}
+
 
 #issues .bubbles line {
    stroke:#D9534F;
@@ -130,11 +144,11 @@
 }
 
 .positive {
-	color:blue;
+	color:#5CB85C;
 }
 
 .negative {
-	color:red;
+	color:#D9534F;
 }
 
 .neutral {
@@ -142,7 +156,8 @@
 }
 
 .currencyFont {
-	font-family: "Comic Sans MS" Arial;
+	font-family: "Georgia";
+    font-size: 15px;
 	font-weight:bold;
 	text-align: right;
 }
@@ -189,6 +204,6 @@
     padding:3px;
 }
 
-.center {
-    margin: 0 auto;
+.arrow {
+    font-size: 20px;
 }
