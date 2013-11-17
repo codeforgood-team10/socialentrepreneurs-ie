@@ -50,7 +50,7 @@ dashboard.controller('Timeline', function($scope, IssuesService, StatusService, 
     var text = "";
     if (entry.type == 'cash' && 'created') {
       console.log(entry);
-      text += "€" + (+entry.obj.value) + " have been " + ((+entry.obj.cash > 0) ? "added to" : "subtracted from") + " cashflow ";
+      text += String.fromCharCode(8364) + Math.abs(+entry.obj.value) + " have been " + ((+entry.obj.value > 0) ? "added to" : "subtracted from") + " cashflow ";
       if (entry.obj.detail) text += "with the reason:" + "\""+ entry.obj.detail + "\"";
     }
 
