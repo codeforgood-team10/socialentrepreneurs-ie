@@ -2,9 +2,344 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761f83f8-7271-4512-8a41-098dd6adb40b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/bootstrap.less" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/bootstrap.less" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/WEB-INF/seicfgWeb-servlet.xml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/WEB-INF/seicfgWeb-servlet.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/WEB-INF/spring/security-context.xml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/WEB-INF/spring/security-context.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/badcredentials.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/badcredentials.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/.bowerrc" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/.bowerrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/.gitignore" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/.jshintrc" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/.jshintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/.travis.yml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/.travis.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/CHANGELOG.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/Gruntfile.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/Gruntfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/angular-moment.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/angular-moment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/angular-moment.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/angular-moment.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/karma.conf.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/karma.conf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/package.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular-moment/tests.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular-moment/tests.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/angular-csp.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/angular.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/angular.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/angular.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/angular.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/angular.min.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/angular/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/angular/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/CNAME" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/CNAME" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/CONTRIBUTING.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/DOCS-LICENSE" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/DOCS-LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/Gruntfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/LICENSE-MIT" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/LICENSE-MIT" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_config.yml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_config.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/ads.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/ads.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/footer.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/header.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-about.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-about.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-components.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-css.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-customize.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-customize.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-getting-started.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-getting-started.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-javascript.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/nav-main.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/nav-main.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/old-bs-docs.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/old-bs-docs.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_includes/social-buttons.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_includes/social-buttons.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_layouts/default.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_layouts/default.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/_layouts/home.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/_layouts/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/about.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/about.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/browserstack.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/browserstack.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/components.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/composer.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/composer.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/css.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/customize.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/customize.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/css/docs.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/css/docs.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/css/pygments-manni.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/css/pygments-manni.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/ico/apple-touch-icon-144-precomposed.png" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/ico/apple-touch-icon-144-precomposed.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/ico/favicon.png" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/ico/favicon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/application.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/application.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/customizer.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/customizer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/filesaver.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/filesaver.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/holder.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/holder.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/ie8-responsive-file-warning.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/ie8-responsive-file-warning.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/jszip.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/jszip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/less.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/less.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/raw-files.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/raw-files.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/docs-assets/js/uglify.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/docs-assets/js/uglify.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/carousel/carousel.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/carousel/carousel.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/carousel/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/carousel/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/grid/grid.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/grid/grid.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/grid/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/grid/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/jumbotron-narrow/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/jumbotron-narrow/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/jumbotron-narrow/jumbotron-narrow.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/jumbotron-narrow/jumbotron-narrow.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/jumbotron/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/jumbotron/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/jumbotron/jumbotron.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/jumbotron/jumbotron.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/justified-nav/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/justified-nav/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/justified-nav/justified-nav.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/justified-nav/justified-nav.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar-fixed-top/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar-fixed-top/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar-fixed-top/navbar-fixed-top.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar-fixed-top/navbar-fixed-top.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar-static-top/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar-static-top/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar-static-top/navbar-static-top.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar-static-top/navbar-static-top.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/navbar/navbar.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/navbar/navbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/non-responsive/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/non-responsive/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/non-responsive/non-responsive.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/non-responsive/non-responsive.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/offcanvas/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/offcanvas/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/offcanvas/offcanvas.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/offcanvas/offcanvas.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/offcanvas/offcanvas.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/offcanvas/offcanvas.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/carousel.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/carousel.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/grid.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/grid.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/jumbotron-narrow.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/jumbotron-narrow.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/jumbotron.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/jumbotron.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/justified-nav.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/justified-nav.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/navbar-fixed.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/navbar-fixed.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/navbar-static.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/navbar-static.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/navbar.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/navbar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/non-responsive.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/non-responsive.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/offcanvas.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/offcanvas.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/sign-in.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/sign-in.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/starter-template.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/starter-template.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/sticky-footer-navbar.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/sticky-footer-navbar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/sticky-footer.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/sticky-footer.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/screenshots/theme.jpg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/screenshots/theme.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/signin/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/signin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/signin/signin.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/signin/signin.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/starter-template/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/starter-template/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/starter-template/starter-template.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/starter-template/starter-template.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/sticky-footer-navbar/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/sticky-footer-navbar/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/sticky-footer-navbar/sticky-footer-navbar.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/sticky-footer-navbar/sticky-footer-navbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/sticky-footer/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/sticky-footer/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/sticky-footer/sticky-footer.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/sticky-footer/sticky-footer.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/theme/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/theme/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/examples/theme/theme.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/examples/theme/theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/getting-started.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/getting-started.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/javascript.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/affix.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/alert.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/button.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/dropdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/popover.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/scrollspy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/affix.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/affix.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/alert.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/alert.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/button.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/button.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/carousel.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/collapse.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/collapse.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/dropdown.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/dropdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/modal.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/phantom.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/phantom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/popover.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/popover.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/scrollspy.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/scrollspy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/tab.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/tab.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/tooltip.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/tooltip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/unit/transition.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/unit/transition.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/vendor/jquery.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/vendor/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/vendor/qunit.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/vendor/qunit.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tests/vendor/qunit.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tests/vendor/qunit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/tooltip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/js/transition.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/badges.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/breadcrumbs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/button-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/carousel.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/close.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/code.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/component-animations.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/glyphicons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/input-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/jumbotron.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/media.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/modals.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/navbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/normalize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/pager.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/popovers.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/print.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/progress-bars.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/responsive-utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/scaffolding.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/theme.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/thumbnails.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/tooltip.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/less/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/bootstrap/package.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/bootstrap/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/d3/LICENSE" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/d3/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/d3/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/d3/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/d3/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/d3/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/d3/d3.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/d3/d3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/d3/d3.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/d3/d3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/.gitignore" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/component.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/component.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/composer.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/composer.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/jquery-migrate.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/jquery-migrate.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/jquery-migrate.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/jquery-migrate.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/jquery.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/jquery/package.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/jquery/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/LICENSE" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ar-ma.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ar-ma.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ar.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/bg.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/bg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/br.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/br.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/bs.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/bs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ca.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/cs.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/cs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/cv.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/cv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/cy.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/cy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/da.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/da.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/de.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/de.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/el.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/en-au.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/en-au.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/en-ca.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/en-ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/en-gb.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/en-gb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/eo.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/eo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/es.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/es.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/et.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/et.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/eu.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/eu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/fa.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/fa.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/fi.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/fi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/fo.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/fo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/fr-ca.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/fr-ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/fr.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/fr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/gl.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/gl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/he.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/he.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/hi.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/hi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/hr.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/hr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/hu.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/hu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/id.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/id.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/is.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/is.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/it.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/it.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ja.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ja.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ka.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ka.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ko.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ko.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/lt.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/lt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/lv.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/lv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ml.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/mr.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/mr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ms-my.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ms-my.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/nb.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/nb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ne.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ne.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/nl.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/nl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/nn.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/nn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/pl.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/pl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/pt-br.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/pt-br.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/pt.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/pt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ro.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ro.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/ru.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/sk.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/sk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/sl.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/sl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/sq.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/sq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/sv.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/sv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/th.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/th.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/tl-ph.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/tl-ph.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/tr.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/tr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/tzm-la.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/tzm-la.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/tzm.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/tzm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/uk.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/uk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/uz.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/uz.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/vn.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/vn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/zh-cn.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/zh-cn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/lang/zh-tw.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/lang/zh-tw.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/min/langs.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/min/langs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/min/langs.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/min/langs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/min/moment-with-langs.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/min/moment-with-langs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/min/moment-with-langs.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/min/moment-with-langs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/min/moment.min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/min/moment.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/moment.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/moment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/moment/readme.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/moment/readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/.gitignore" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/.travis.yml" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/.travis.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/CNAME" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/CNAME" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/CONTRIBUTING.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/LICENSE" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/README.md" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/Rakefile" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/Rakefile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/bower.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/docco.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/docco.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/favicon.ico" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/images/background.png" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/images/background.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/images/underscore.png" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/images/underscore.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-bold.eot" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-bold.ttf" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-bold.woff" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-light.eot" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-light.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-light.ttf" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-light.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/aller-light.woff" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/aller-light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/novecento-bold.eot" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/novecento-bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/novecento-bold.ttf" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/novecento-bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/fonts/novecento-bold.woff" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/fonts/novecento-bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/public/stylesheets/normalize.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/public/stylesheets/normalize.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/docs/underscore.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/docs/underscore.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/favicon.ico" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/favicon.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/package.json" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/arrays.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/arrays.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/chaining.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/chaining.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/collections.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/collections.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/functions.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/objects.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/objects.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/speed.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/speed.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/utility.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/utility.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/vendor/jquery.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/vendor/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/vendor/jslitmus.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/vendor/jslitmus.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/vendor/qunit.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/vendor/qunit.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/vendor/qunit.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/vendor/qunit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/test/vendor/runner.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/test/vendor/runner.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/underscore-min.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/underscore-min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/underscore-min.map" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/underscore-min.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/components/underscore/underscore.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/components/underscore/underscore.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
     </list>
     <ignored path="socialentrepreneursie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,9 +362,9 @@
       <split-first>
         <leaf>
           <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="164" column="35" selection-start="5984" selection-end="5984" vertical-scroll-proportion="-3.7551022">
+                <state line="184" column="18" selection-start="6434" selection-end="6434" vertical-scroll-proportion="-3.7551022">
                   <folding>
                     <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -37,10 +372,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="134" column="52" selection-start="4142" selection-end="4142" vertical-scroll-proportion="0.6852792">
+                <state line="142" column="52" selection-start="4214" selection-end="4214" vertical-scroll-proportion="3.8443317">
                   <folding />
                 </state>
               </provider>
@@ -50,26 +385,26 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
+          <file leaf-file-name="user.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="112" column="61" selection-start="4342" selection-end="4348" vertical-scroll-proportion="0.64788735">
+                <state line="26" column="10" selection-start="991" selection-end="991" vertical-scroll-proportion="0.73239434">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="183" column="15" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-97.84615">
+                <state line="213" column="18" selection-start="2715" selection-end="2715" vertical-scroll-proportion="-18.923077">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="16" column="99" selection-start="683" selection-end="772" vertical-scroll-proportion="-11.130435">
                   <folding />
@@ -78,9 +413,9 @@
             </entry>
           </file>
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
+            <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="131" column="39" selection-start="3986" selection-end="3986" vertical-scroll-proportion="-4.923077">
+                <state line="139" column="0" selection-start="4082" selection-end="4082" vertical-scroll-proportion="-4.923077">
                   <folding />
                 </state>
               </provider>
@@ -105,9 +440,9 @@
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/static/user.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
-        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
       </list>
     </option>
   </component>
@@ -219,64 +554,8 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="socialentrepreneursie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="socialentrepreneursie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seicfg-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="socialentrepreneursie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="socialentrepreneursie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seicfg-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,6 +589,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/seicfg-web/src/main/webapp/static" />
+    </key>
+  </component>
   <component name="RunManager">
     <list size="0" />
   </component>
@@ -342,13 +626,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="778" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1381295" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1381295" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -418,32 +702,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html">
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="99" selection-start="683" selection-end="772" vertical-scroll-proportion="-11.130435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="15" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-97.84615">
+        <state line="139" column="0" selection-start="4082" selection-end="4082" vertical-scroll-proportion="-4.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="35" selection-start="5984" selection-end="5984" vertical-scroll-proportion="-3.7551022">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="213" column="18" selection-start="2715" selection-end="2715" vertical-scroll-proportion="-18.923077">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="52" selection-start="4142" selection-end="4142" vertical-scroll-proportion="0.6852792">
+        <state line="26" column="10" selection-start="991" selection-end="991" vertical-scroll-proportion="0.73239434">
           <folding />
         </state>
       </provider>

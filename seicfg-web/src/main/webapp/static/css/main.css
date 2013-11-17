@@ -207,3 +207,14 @@
 .arrow {
     font-size: 20px;
 }
+.brand {
+    float: left;
+}
+.link {
+    margin-top: 28px;
+    float:right;
+}
+.header {
+    clear: both;
+    overflow: hidden;
+}
