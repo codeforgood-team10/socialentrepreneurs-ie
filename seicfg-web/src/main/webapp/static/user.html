@@ -39,27 +39,30 @@
 					<button ng-click="add(newStatus)" class="inside-submit btn btn-info" id="statusSubmitButton"> Submit </button>
 				</li>
 
-				<li 
-					ng-repeat="status in statuses | orderBy:'time':true"  
-					ng-show="!showAll && $first"
-					class="status-item"
-					>
-					{{ status.text }}
+				<div ng-class="{shown: !showAll, hidden: showAll}" >
+					<li 
+						ng-repeat="status in statuses | orderBy:'time':true"  
+						ng-show="$first"
+						class="status-item"
+						>
+						{{ status.text }}
+					</li>
+				</div>
+
+				<div ng-class="{shown: showAll, hidden: !showAll}">
+					<li 
+						ng-repeat="status in statuses | orderBy:'time':true"
+						class="status-item">
+						{{ status.text }}
+					</li>
+				</div>
+
+				<li ng-show="!showAll" ng-click="triggerShow()" style="text-align:center">
+					<span class="glyphicon glyphicon-chevron-down"> </span>
 				</li>
 
-				<li 
-					ng-show="showAll" 
-					ng-repeat="status in statuses | orderBy:'time':true"
-					class="status-item">
-					{{ status.text }}
-				</li>
-
-				<li ng-show="!showAll" ng-click="triggerShow()">
-					See more
-				</li>
-
-				<li ng-show="showAll" ng-click="triggerShow()">
-					Hide Statuses
+				<li ng-show="showAll" ng-click="triggerShow()" style="text-align:center">
+					<span class="glyphicon glyphicon-chevron-up"> </span>
 				</li>
 
 			</ul>
