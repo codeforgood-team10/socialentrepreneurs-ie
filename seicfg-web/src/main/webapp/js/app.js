@@ -131,6 +131,8 @@ dashboard.controller('MilestoneController', function($scope, MilestoneService){
 
 	$scope.toggle = function(milestone) {
 		milestone.solved = !milestone.solved;
+    var index = MilestoneService.milestone.indexOf(milestone);
+    MilestoneService.milestone[index] = angular.copy(milestone);
 
     if (milestone.solved) {
       milestone.solvedTime = new Date();
