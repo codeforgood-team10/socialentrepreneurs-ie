@@ -14,14 +14,15 @@
 </head>
 
 <body>
+<a style="float:right;" href="/seicfg-web/logout">Logout</a>
 <div class="container">
 	<div class="col-lg-8 col-lg-offset-2">
-		<h3>Entrepreneur dashboard</h3> <a style"float:right;" href="/seicfg-web/logout">Logout</a>
+		<h3>Entrepreneur dashboard</h3>
 		<hr>
 		<div class="box" id="issues" ng-controller="IssuesController">
 
 			<h4 class="align-center">Issues ({{ unsolved.length || 0 }})</h4>
-
+        <div class="chart" d3-issues></div>
         <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{  (unsolved.length+1) * 50 }}">
           <g>
             <line ng-attr-x1="{{ 40/2 }}" y1="1" ng-attr-x2="{{ 40/2 }}" ng-attr-y2="{{ (unsolved.length+1) * 50 - 20 }}"/>
@@ -39,19 +40,17 @@
             <circle class="circleIssue" cx="20" ng-attr-cy="{{ calculateCircleY($index+1) }}" r="20"></circle>
             <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 10 }}" width="100%" height="180">
               {{issue.text}} <span class="label label-danger">{{ issue.time | fromNow }}</span>
-              <span class="close inline-close" ng-click="delete($index)">&times;</span>
+              <span class="close inline-close" ng-click="delete(issue)">&times;</span>
             </foreignobject>
 
           </g>
         </svg>
-
-      <div class="chart" d3-issues></div>
 		</div>
 
 		<div class="box" id="milestone" ng-controller="MilestoneController">
 
 			<h4>Milestones ({{ (milestoneService.milestone | filter:{solved:false}).length  }})</h4>
-
+      <div class="chart" d3-milestones></div>
 			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (getFutureMilestoneNumber() + 1) * 50 }}">
 
 				<line 
@@ -87,16 +86,15 @@
 					</circle>
 					<foreignobject 
 						x="50" 
-						ng-attr-y="{{ calculateCircleY($index + 1) }}" 
+						ng-attr-y="{{ calculateCircleY($index + 1) - 10 }}"
 						width="100%" 
 						height="180">
-							{{milestone.text}}
+							{{milestone.text}} <span class="label label-warning">{{ milestone.time | fromNow }}</span>
 					</foreignobject>
 				</g>
 			</svg>
 
 			<h4>Solved Milestones ({{ (milestoneService.milestone | filter:{solved:true}).length  }})</h4>
-
 			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ getPastMilestoneNumber() * 50 }}">
 
 				<line 
@@ -112,26 +110,54 @@
 						class="circleMilestonePast" 
 						ng-click="toggle(milestone)"
 						cx="20" 
-						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						ng-attr-cy="{{ calculateCircleY($index) }}"
 						r="20">
 					</circle>
 					<circle 
 						class="circleHole" 
 						ng-click="toggle(milestone)"
 						cx="20" 
-						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						ng-attr-cy="{{ calculateCircleY($index) }}"
 						ng-attr-r=" {{ 20 - 5 }}"> 
 					</circle>
 					<foreignobject 
 						x="50" 
-						ng-attr-y="{{ calculateCircleY($index) }}" 
+						ng-attr-y="{{ calculateCircleY($index) -10 }}"
 						width="100%" 
 						height="180">
-							{{milestone.text}}
+							{{milestone.text}} <span class="label label-success">{{ milestone.time | fromNow }}</span>
 					</foreignobject>
 				</g>
 			</svg>
 
+		</div>
+
+		<div class="box" id="cashflow" ng-controller="CashflowController">
+      <h4>Cashflow</h4>
+      <div class="chart" d3-cashflow></div>
+			<ul class="simple-list">
+				<li>
+					<input 
+						ng-model="money.text" 
+						ng-enter="add()"
+						class="currencyFont moneyInputForm ng-class: {positive: money.text>0, negative:money.text<0, neutral:money.text==0};"
+					</input>
+					Reason: 
+					<input ng-model="descr.text" ng-enter="add()" class="explanationInputForm"></input>
+				</li>
+
+				<table class="cashflow">
+					<tr ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true">
+						<td class="moneyValue currencyFont ng-class: {positive: entry.value>0, negative:entry.value<0, neutral:entry.value==0};">
+							{{ entry.value }}
+						</td>
+						<td> {{ entry.detail }} <span class="label label-info">{{ entry.time | fromNow }}</span></td>
+					</tr>
+				</table>
+
+				<li ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true"> 
+				</li>
+			</ul>
 		</div>
 
 

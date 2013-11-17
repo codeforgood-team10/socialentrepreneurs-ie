@@ -1,5 +1,30 @@
 #issues {
 }
+
+#cashflow .chart .line {
+    fill: none;
+    stroke: #5BC0DE;
+    stroke-width: 5px;
+}
+#cashflow .chart .point {
+    stroke: #5BC0DE;
+    stroke-width: 5px;
+    fill:#5BC0DE;
+}
+
+#cashflow .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
+#cashflow .chart .point:hover {
+    fill: #dfdfdf;
+}
+
+#cashflow path.area {
+    fill: rgba(91, 192, 222, 0.36);
+}
+
 #issues .bubbles line {
    stroke:#D9534F;
    stroke-width:10;
@@ -19,6 +44,11 @@
     fill: #D9534F;
 }
 
+#issues .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
 #issues .chart .point:hover {
     fill: #dfdfdf;
 }
@@ -27,12 +57,36 @@
     fill: #FFCAC8;
 }
 
+#milestone .chart .line {
+    fill: none;
+    stroke: #ffd700;
+    stroke-width: 5px;
+}
+#milestone .chart .point {
+    stroke: #ffd700;
+    stroke-width: 5px;
+    fill: #ffd700;
+}
+
+#milestone .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
+#milestone .chart .point:hover {
+    fill: #dfdfdf;
+}
+
+#milestone path.area {
+    fill: #fff77c;
+}
+
 .circleMilestoneFuture {
 	fill: #ffd700;
 }
 
 .circleMilestonePast {
-	fill: #99cc32;
+	fill: #5CB85C;
 }
 
 .circleHole {
@@ -73,4 +127,42 @@
 }
 .strike {
     text-decoration:line-through;
+}
+
+.positive {
+	color:blue;
+}
+
+.negative {
+	color:red;
+}
+
+.neutral {
+	color:black;
+}
+
+.currencyFont {
+	font-family: "Comic Sans MS" Arial;
+	font-weight:bold;
+	font-size: 16px;
+	text-align: right;
+}
+
+.moneyInputForm {
+	border:none;
+	border-bottom:2px dashed;
+	outline-width:0;
+
+	width:100px;
+}
+
+.explanationInputForm {
+	border:none;
+	border-bottom:2px solid;
+	outline-width: 0;
+	overflow: visible;
+}
+
+.cashflow td {
+	padding: 0 5px;
 }
