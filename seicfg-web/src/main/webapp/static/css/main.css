@@ -233,6 +233,9 @@
     overflow:hidden;
 
     color:white;
+    opacity: 1;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
 }
 
 .brand {
@@ -256,6 +259,13 @@
     display: block;
 }
 
-.hidden {
-    display:none;
+.hidden2 {
+    opacity: 0;
+    height: 0 !important;
+    margin-top:  0 !important;
+    margin-bottom:  0 !important;
+    padding-bottom:  0 !important;
+    padding-top:  0 !important;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }

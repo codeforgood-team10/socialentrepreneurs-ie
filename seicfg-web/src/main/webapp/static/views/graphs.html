@@ -13,14 +13,14 @@
 
       <li
           ng-repeat="status in statuses | orderBy:'time':true"
-          ng-show="!showAll && $first"
+          ng-class="{hidden2: (!showAll && $first)}"
           class="status-item"
           >
         {{ status.text }}
       </li>
 
       <li
-          ng-show="showAll"
+          ng-class="{hidden2: !showAll}"
           ng-repeat="status in statuses | orderBy:'time':true"
           class="status-item">
         {{ status.text }}
