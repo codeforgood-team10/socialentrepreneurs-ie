@@ -17,7 +17,7 @@
 <a style="float:right;" href="/seicfg-web/logout">Logout</a>
 <div class="container">
 	<div class="col-lg-8 col-lg-offset-2">
-		<h3>Entrepreneur dashboard</h3>
+		<h3><img id="logo" src="http://socialentrepreneurs.ie/wp-content/themes/sei/images/logo.png">Entrepreneur dashboard</h3>
 		<hr>
 		<div class="box" id="issues" ng-controller="IssuesController">
 
@@ -135,6 +135,53 @@
 		<div class="box" id="cashflow" ng-controller="CashflowController">
       <h4>Cashflow</h4>
       <div class="chart" d3-cashflow></div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ cashflowService.cashflow.length * 50 }}">
+
+        <line
+            class="lineMilestonePast"
+            ng-attr-x1="{{ 40/2 }}"
+            y1="1"
+            ng-attr-x2="{{ 40/2 }}"
+            ng-attr-y2="{{ cashflowService.cashflow.length * 50 - 20 }}">
+        </line>
+
+        <g ng-repeat="cash in cashflowService.cashflow | orderBy:'time':true">
+          <circle
+              class="circleCashflow"
+              ng-click="toggle(cash)"
+              cx="20"
+              ng-attr-cy="{{ calculateCircleY($index) }}"
+              r="20">
+          </circle>
+          <circle
+              class="circleHole"
+              ng-click="toggle(cash)"
+              cx="20"
+              ng-attr-cy="{{ calculateCircleY($index) }}"
+              ng-attr-r=" {{ 20 - 5 }}">
+          </circle>
+          <foreignobject
+              x="10"
+              ng-attr-y="{{ calculateCircleY($index) -14   }}"
+              width="100%"
+              height="180">
+            <span class="arrow positive" ng-show="cash.value>0">&#x25B2;</span>
+            <span class="arrow negative" ng-show="cash.value<0">&#x25BC;</span>
+          </foreignobject>
+          <foreignobject
+              x="50"
+              ng-attr-y="{{ calculateCircleY($index) -10 }}"
+              width="100%"
+              height="180">
+            <span class="moneyValue currencyFont ng-class: {positive: cash.value>0, negative:cash.value<0, neutral:cash.value==0};">
+              &euro; {{abs(cash.value)}}
+            </span>
+            {{ cash.detail }}
+            <span class="label label-info">{{ cash.time | fromNow }}</span>
+          </foreignobject>
+        </g>
+      </svg>
+
 			<ul class="simple-list">
 				<li>
 					<input 
@@ -146,17 +193,6 @@
 					<input ng-model="descr.text" ng-enter="add()" class="explanationInputForm"></input>
 				</li>
 
-				<table class="cashflow">
-					<tr ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true">
-						<td class="moneyValue currencyFont ng-class: {positive: entry.value>0, negative:entry.value<0, neutral:entry.value==0};">
-							{{ entry.value }}
-						</td>
-						<td> {{ entry.detail }} <span class="label label-info">{{ entry.time | fromNow }}</span></td>
-					</tr>
-				</table>
-
-				<li ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true"> 
-				</li>
 			</ul>
 		</div>
 

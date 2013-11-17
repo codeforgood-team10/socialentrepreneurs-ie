@@ -21,6 +21,7 @@ dashboard.controller('UsersList', function($http, $scope) {
   });
 
   $scope.create = function(newUser) {
+    console.log("asd", newUser)
     $http.post("http://localhost:8080/seicfg-web/users/add", newUser).then(function(response) {
       console.log(response);
       $scope.users.push(response.data);
@@ -132,7 +133,18 @@ dashboard.controller('CashflowController', function($scope, CashflowService){
 	$scope.money = {};
 	$scope.descr = {};
 
+  $scope.abs = function(val) {
+    if(typeof val == 'String') val = +val;
+    return Math.abs(val);
+  }
 	$scope.cashflowService = CashflowService;
+
+  $scope.calculateCircleX = function(index) {
+    return 50;
+  }
+  $scope.calculateCircleY = function(index) {
+    return (index * 50) +20;
+  }
 
 	$scope.add = function() {
 		money = $scope.money.text;
@@ -440,7 +452,7 @@ dashboard.directive('d3Cashflow', function($window, CashflowService) {
         var yAxis = d3.svg.axis()
           .scale(y)
           .orient("left")
-          .ticks(2);
+          .ticks(10);
 
         var line = d3.svg.line()
           .interpolate('cardinal')

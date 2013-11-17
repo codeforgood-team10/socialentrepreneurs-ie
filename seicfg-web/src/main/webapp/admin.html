@@ -1,6 +1,6 @@
 <html ng-app="dashboard">
   <head>
-    <title>Entrepreneur dashboard</title>
+    <title>Admin dashboard</title>
     <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -14,7 +14,8 @@
   <body>
   <div class="container">
     <div class="col-lg-8 col-lg-offset-2">
-      <h3>Entrepreneur dashboard</h3>
+      <h3><img id="logo" src="http://socialentrepreneurs.ie/wp-content/themes/sei/images/logo.png"> Admin dashboard</h3>
+      <hr>
       <div id="listOfUsers" ng-controller="UsersList">
         <ul>
           <li ng-repeat="user in users">{{ user.emailId }}</li>
