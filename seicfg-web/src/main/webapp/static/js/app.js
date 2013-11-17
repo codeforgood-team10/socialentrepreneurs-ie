@@ -116,10 +116,10 @@ AngularJS Issues
 ==================*/
 dashboard.service('IssuesService', function() {
   this.issues = [
-    {text:"Issue here", time: new Date("2013-11-06"), solved: false},
-    {text:"Issues 2 eye", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
-    {text:"Issues 2 eye", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
-    {text:"Issues 2 eye", time: new Date("2013-11-03"), solvedTime:new Date("2013-11-05"), solved:true}
+    {text:"We need a lawyer to set up the company", time: new Date("2013-11-06"), solved: false},
+    {text:"Is there any way we can buy a 3d printer?", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
+    {text:"This will never be shown", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
+    {text:"Not even this one", time: new Date("2013-11-03"), solvedTime:new Date("2013-11-05"), solved:true}
   ];
 });
 
@@ -134,10 +134,12 @@ dashboard.controller('UsersList', function($http, $scope) {
     console.log("asd", newUser)
     $http.post("http://localhost:8080/seicfg-web/users/add", newUser).then(function(response) {
       console.log(response);
-      $scope.users.push(response.data);
+     // $scope.users.push(response.data);
     }, function(err) {
       console.log(err);
     })
+    $scope.users.push(newUser);
+    $scope.newUser = newUser = {}
   }
 })
 dashboard.controller('IssuesController', function($scope, IssuesService, $filter, $http){
@@ -158,10 +160,10 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
     newIssue.solved = false;
     newIssue.solvedTime = false;
 
-    $http.post('http://localhost:8080/seicfg-web/updates/add', {type:'issue', value:newIssue.text, status:'', remarks:''}).then(function(response){
-      IssuesService.issues.push(response.data)
+//    $http.post('http://localhost:8080/seicfg-web/updates/add', {type:'issue', value:newIssue.text, status:'', remarks:''}).then(function(response){
+      IssuesService.issues.push(newIssue)
       $scope.newIssue = newIssue = {};
-    });
+  //  });
 	}
 
   $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
@@ -183,10 +185,10 @@ x = {};
 AngularJS Milestones
 ====================*/
 dashboard.service('MilestoneService', function() {
-	this.milestone = [{text:"Issue here", time: new Date("2013-11-06"), solved: false},
-  {text:"Issues 2 eye", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
-  {text:"Issues 2 eye", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
-  {text:"Issues 2 eye", time: new Date("2013-11-03"), solvedTime:new Date("2013-11-05"), solved:true}];
+	this.milestone = [{text:"Teaching to the children in Westminster", time: new Date("2013-11-06"), solved: false},
+  {text:"Get the website online with all the headers and sidebar sets", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
+  {text:"Get an invoice from the queen", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
+  {text:"Going to JPMorgan hackathon, write a lot of code and use lot of colors in the demo", time: new Date("2013-11-03"), solvedTime:new Date("2013-11-05"), solved:true}];
 	this.solvedMilestone = [];
 });
 
@@ -242,13 +244,13 @@ AngularJS CashFlow
 
 dashboard.service('CashflowService', function() {
 	this.cashflow = [
-		{detail:"Issue here", value:"10", time: new Date("2013-11-01")},
-		{detail:"Issues 2 eye", value:"-10", time: new Date("2013-11-02")},
-    {detail:"Issues 2 eye", value:"10", time: new Date("2013-11-03")},
-    {detail:"Issues 2 eye", value:"20", time: new Date("2013-11-04")},
-    {detail:"Issues 2 eye", value:"30", time: new Date("2013-11-05")},
-    {detail:"Issues 2 eye", value:"-10", time: new Date("2013-11-06")},
-    {detail:"Issues 2 eye", value:"30", time: new Date("2013-11-07")},
+		{detail:"Selling one teapot", value:"10", time: new Date("2013-11-01")},
+		{detail:"Hammersmith and city train ticket", value:"-10", time: new Date("2013-11-02")},
+    {detail:"Neighborhood cleaning", value:"10", time: new Date("2013-11-03")},
+    {detail:"Selling cds", value:"20", time: new Date("2013-11-04")},
+    {detail:"Fundraising", value:"30", time: new Date("2013-11-05")},
+    {detail:"Various expenses", value:"-10", time: new Date("2013-11-06")},
+    {detail:"Initial pocket money", value:"30", time: new Date("2013-11-07")},
 	];
 });
 
