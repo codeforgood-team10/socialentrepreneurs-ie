@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761f83f8-7271-4512-8a41-098dd6adb40b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
     </list>
     <ignored path="socialentrepreneursie.iws" />
@@ -27,7 +28,7 @@
           <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="143" column="35" selection-start="5453" selection-end="5453" vertical-scroll-proportion="-3.7551022">
+                <state line="163" column="35" selection-start="5895" selection-end="5895" vertical-scroll-proportion="-3.7551022">
                   <folding>
                     <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -38,7 +39,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="3" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.5499154">
+                <state line="68" column="3" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.5499154">
                   <folding />
                 </state>
               </provider>
@@ -51,7 +52,7 @@
           <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="97" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.217391">
+                <state line="39" column="0" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-13.217391">
                   <folding />
                 </state>
               </provider>
@@ -60,7 +61,7 @@
           <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="159" column="16" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-97.84615">
+                <state line="183" column="15" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-97.84615">
                   <folding />
                 </state>
               </provider>
@@ -78,7 +79,7 @@
           <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="243" column="16" selection-start="7012" selection-end="7012" vertical-scroll-proportion="0.40609136">
+                <state line="621" column="0" selection-start="17806" selection-end="17806" vertical-scroll-proportion="0.19796954">
                   <folding />
                 </state>
               </provider>
@@ -425,21 +426,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="16" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-97.84615">
+        <state line="183" column="15" selection-start="2355" selection-end="2355" vertical-scroll-proportion="-97.84615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="97" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.217391">
+        <state line="39" column="0" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-13.217391">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="16" selection-start="7012" selection-end="7012" vertical-scroll-proportion="0.40609136">
+        <state line="621" column="0" selection-start="17806" selection-end="17806" vertical-scroll-proportion="0.19796954">
           <folding />
         </state>
       </provider>

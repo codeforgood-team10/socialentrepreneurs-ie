@@ -625,6 +625,7 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
           _.map(issues, function(issue) {
             if (frequency[day].indexOf(issue) > -1) return;
             if (!issue.solved && +issue.time < +(new Date(day))) frequency[day].push(issue);
+            else if (!issue.solved && moment(issue.time).format("YYYY-MM-DD") == day) frequency[day].push(issue);
             if (issue.solved && +issue.time < +(new Date(day)) && +issue.solvedTime > +(new Date(day))) frequency[day].push(issue);
             return;
           })
