@@ -22,7 +22,7 @@
 
 		<div class="box" id="status" ng-controller="StatusController">
 
-			<ul class="simple-list">
+			<ul class="simple-list status-input">
 				<li class="status-input">
 					<textarea 
 						ng-model="newStatus.text" 
@@ -32,11 +32,18 @@
 					<button ng-click="add(newStatus)" class="inside-submit btn btn-info" id="statusSubmitButton"> Submit </button>
 				</li>
 
-				<li ng-repeat="status in statuses | orderBy:'time':true"  ng-show="!showAll && $first">
+				<li 
+					ng-repeat="status in statuses | orderBy:'time':true"  
+					ng-show="!showAll && $first"
+					class="status-item"
+					>
 					{{ status.text }}
 				</li>
 
-				<li ng-show="showAll" ng-repeat="status in statuses | orderBy:'time':true">
+				<li 
+					ng-show="showAll" 
+					ng-repeat="status in statuses | orderBy:'time':true"
+					class="status-item">
 					{{ status.text }}
 				</li>
 

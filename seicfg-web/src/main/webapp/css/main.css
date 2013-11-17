@@ -190,11 +190,12 @@
     resize: none;
     width: 600px;
     height: 50px;
+    margin-bottom: 5px;
 }
 
 .inside-submit {
     position:absolute;
-    bottom:5px;
+    bottom:10px;
     right:5px;
 
     font-size: 10px;
@@ -206,4 +207,17 @@
 
 .arrow {
     font-size: 20px;
+}
+
+#statusList {
+    margin-top: 10px;
+}
+
+.status-item { 
+    background-color:yellow;
+
+    padding: 5px;
+
+    border: 2px solid red;
+
 }
