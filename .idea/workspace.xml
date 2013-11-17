@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="761f83f8-7271-4512-8a41-098dd6adb40b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
     </list>
     <ignored path="socialentrepreneursie.iws" />
@@ -28,10 +25,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.65692824">
       <split-first>
         <leaf>
-          <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="user.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="176" column="26" selection-start="6723" selection-end="6723" vertical-scroll-proportion="0.6289425">
+                <state line="133" column="8" selection-start="5045" selection-end="5045" vertical-scroll-proportion="0.7887324">
                   <folding>
                     <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -70,7 +67,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="137" column="11" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.45869946">
@@ -99,8 +96,8 @@
         <option value="$PROJECT_DIR$/static/user.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/admin.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/css/main.css" />
-        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
       </list>
     </option>
   </component>
@@ -425,17 +422,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="97" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.217391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="137" column="11" selection-start="4415" selection-end="4415" vertical-scroll-proportion="0.45869946">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="8" selection-start="5045" selection-end="5045" vertical-scroll-proportion="0.7887324">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -30,7 +30,7 @@
 
           <g>
             <circle class="circleIssue" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
-            <foreignobject x="50" ng-attr-y="{{ 10 }}" width="100%" height="180">
+            <foreignobject x="50" ng-attr-y="{{ 7 }}" width="100%" height="180">
               <input type="text" placeholder="New issue encountered" ng-model="newIssue.text" ng-enter="add(newIssue)">
             </foreignobject>
 
@@ -38,7 +38,7 @@
 
           <g ng-repeat="issue in unsolved | orderBy:'time':true">
             <circle class="circleIssue" cx="20" ng-attr-cy="{{ calculateCircleY($index+1) }}" r="20"></circle>
-            <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 10 }}" width="100%" height="180">
+            <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 7 }}" width="100%" height="180">
               {{issue.text}} <span class="label label-danger">{{ issue.time | fromNow }}</span>
               <span class="close inline-close" ng-click="delete(issue)">&times;</span>
             </foreignobject>
@@ -46,7 +46,7 @@
           </g>
         </svg>
 		</div>
-
+    <hr>
 		<div class="box" id="milestone" ng-controller="MilestoneController">
 
 			<h4>Milestones ({{ (milestoneService.milestone | filter:{solved:false}).length  }})</h4>
@@ -131,7 +131,7 @@
 			</svg>
 
 		</div>
-
+    <hr>
 		<div class="box" id="cashflow" ng-controller="CashflowController">
       <h4>Cashflow</h4>
       <div class="chart" d3-cashflow></div>
