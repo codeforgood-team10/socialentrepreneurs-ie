@@ -208,7 +208,6 @@
 .arrow {
     font-size: 20px;
 }
-
 #statusList {
     margin-top: 10px;
 }
@@ -219,5 +218,16 @@
     padding: 5px;
 
     border: 2px solid red;
+}
 
+.brand {
+    float: left;
+}
+.link {
+    margin-top: 28px;
+    float:right;
+}
+.header {
+    clear: both;
+    overflow: hidden;
 }
