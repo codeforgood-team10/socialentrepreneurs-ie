@@ -14,13 +14,13 @@
           ng-class="{circleCashflow: entry.type == 'cash', circleIssue: entry.type == 'issue', circleMilestoneFuture: entry.type == 'mile' && entry.action == 'created', circleMilestonePast: entry.type == 'mile' && entry.action == 'solved'}"
           ng-click="toggle(cash)"
           cx="20"
-          ng-attr-cy="{{ calculateCircleY($index+1) }}"
+          ng-attr-cy="{{ calculateCircleY($index) }}"
           r="20">
       </circle>
 
       <foreignobject
           x="10"
-          ng-attr-y="{{ calculateCircleY($index+1) -14   }}"
+          ng-attr-y="{{ calculateCircleY($index) -14   }}"
           width="100%"
           height="180">
         <span class="arrow positive" ng-show="cash.value>0">&#x25B2;</span>
@@ -28,7 +28,7 @@
       </foreignobject>
       <foreignobject
           x="50"
-          ng-attr-y="{{ calculateCircleY($index+1) -10 }}"
+          ng-attr-y="{{ calculateCircleY($index) -10 }}"
           width="100%"
           height="180">
         <span class="label" ng-class="{'label-info': entry.type == 'cash', 'label-danger': entry.type == 'issue', 'label-warning': entry.type == 'mile' && entry.action == 'created', 'label-success': entry.type == 'mile' && entry.action == 'solved'}">{{ entry.time | timeYMD }}</span>
