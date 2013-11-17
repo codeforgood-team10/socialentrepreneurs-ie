@@ -49,7 +49,7 @@
 		<div class="box" id="milestone" ng-controller="MilestoneController">
 
 			<h4>Milestones ({{ (milestoneService.milestone | filter:{solved:false}).length  }})</h4>
-
+      <div class="chart" d3-milestones></div>
 			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (getFutureMilestoneNumber() + 1) * 50 }}">
 
 				<line 
@@ -94,7 +94,6 @@
 			</svg>
 
 			<h4>Solved Milestones ({{ (milestoneService.milestone | filter:{solved:true}).length  }})</h4>
-
 			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ getPastMilestoneNumber() * 50 }}">
 
 				<line 

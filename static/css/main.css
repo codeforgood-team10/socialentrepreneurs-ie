@@ -32,6 +32,30 @@
     fill: #FFCAC8;
 }
 
+#milestone .chart .line {
+    fill: none;
+    stroke: #ffd700;
+    stroke-width: 5px;
+}
+#milestone .chart .point {
+    stroke: #ffd700;
+    stroke-width: 5px;
+    fill: #ffd700;
+}
+
+#milestone .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
+#milestone .chart .point:hover {
+    fill: #dfdfdf;
+}
+
+#milestone path.area {
+    fill: #fff77c;
+}
+
 .circleMilestoneFuture {
 	fill: #ffd700;
 }
