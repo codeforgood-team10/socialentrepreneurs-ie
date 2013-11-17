@@ -26,12 +26,12 @@
         {{ status.text }}
       </li>
 
-      <li ng-show="!showAll" ng-click="triggerShow()">
-        See more
+      <li ng-show="!showAll" ng-click="triggerShow()" class="alignCenter">
+        <span class="glyphicon glyphicon-chevron-down"></span>
       </li>
 
-      <li ng-show="showAll" ng-click="triggerShow()">
-        Hide Statuses
+      <li ng-show="showAll" ng-click="triggerShow()" class="alignCenter">
+        <span class="glyphicon glyphicon-chevron-up"></span>
       </li>
 
     </ul>

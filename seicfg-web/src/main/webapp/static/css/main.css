@@ -154,7 +154,9 @@
 .neutral {
 	color:black;
 }
-
+.alignCenter {
+    text-align: center;
+}
 .currencyFont {
 	font-family: "Georgia";
     font-size: 15px;

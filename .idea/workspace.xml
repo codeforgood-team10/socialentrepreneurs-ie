@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761f83f8-7271-4512-8a41-098dd6adb40b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIMessage.java" afterPath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIMetric.java" afterPath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIMetric.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIUpdate.java" afterPath="$PROJECT_DIR$/seicfg-orm/src/main/java/uk/seicfg/orm/entities/SEIUpdate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/MessageResource.java" afterPath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/MessageResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/MetricResource.java" afterPath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/MetricResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/UpdateResource.java" afterPath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/UpdateResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/UserResource.java" afterPath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/rest/UserResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/util/converter/UserConverter.java" afterPath="$PROJECT_DIR$/seicfg-web/src/main/java/uk/seicfg/util/converter/UserConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/timeline.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/timeline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html" afterPath="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html" />
     </list>
     <ignored path="socialentrepreneursie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +48,7 @@
           <file leaf-file-name="graphs.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="180" column="60" selection-start="6513" selection-end="6518" vertical-scroll-proportion="-8.653061">
+                <state line="180" column="60" selection-start="6638" selection-end="6643" vertical-scroll-proportion="-8.653061">
                   <folding />
                 </state>
               </provider>
@@ -90,16 +79,16 @@
           <file leaf-file-name="graphs.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="17" selection-start="262" selection-end="262" vertical-scroll-proportion="-5.5652175">
+                <state line="32" column="71" selection-start="984" selection-end="984" vertical-scroll-proportion="-6.979592">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="251" column="1" selection-start="3188" selection-end="3188" vertical-scroll-proportion="-154.46153">
+                <state line="157" column="22" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.794702">
                   <folding />
                 </state>
               </provider>
@@ -114,10 +103,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="67" column="61" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.7038917">
+                <state line="67" column="61" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-16.0">
                   <folding />
                 </state>
               </provider>
@@ -147,11 +136,11 @@
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/user.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/views/test.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/app.js" />
-        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html" />
-        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/timeline.html" />
         <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html" />
+        <option value="$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css" />
       </list>
     </option>
   </component>
@@ -478,33 +467,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="99" selection-start="683" selection-end="772" vertical-scroll-proportion="-11.130435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="-3.4285715">
           <folding>
             <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="262" selection-end="262" vertical-scroll-proportion="-5.5652175">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="1" selection-start="3188" selection-end="3188" vertical-scroll-proportion="-154.46153">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -524,7 +492,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="61" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.7038917">
+        <state line="67" column="61" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-16.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="99" selection-start="683" selection-end="772" vertical-scroll-proportion="-11.130435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/views/graphs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="71" selection-start="984" selection-end="984" vertical-scroll-proportion="-6.979592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seicfg-web/src/main/webapp/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="22" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.794702">
           <folding />
         </state>
       </provider>
