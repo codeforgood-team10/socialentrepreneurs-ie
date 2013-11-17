@@ -124,13 +124,19 @@ dashboard.controller('MilestoneController', function($scope, MilestoneService){
 		$scope.newMilestone = newMilestone = {};
 	}
 
-	$scope.delete = function(index) {
-		milestoneListSize = MilestoneService.milestone.length;
-		MilestoneService.milestone.splice(milestoneListSize - index - 1, 1);
+	$scope.delete = function(milestone) {
+    var index = MilestoneService.milestone.indexOf(milestone);
+		MilestoneService.milestone.splice(index, 1);
 	}
 
 	$scope.toggle = function(milestone) {
 		milestone.solved = !milestone.solved;
+
+    if (milestone.solved) {
+      milestone.solvedTime = new Date();
+    } else {
+      milestone.solvedTime = false;
+    }
 	}
 
 	$scope.calculateCircleX = function(index) {
@@ -595,8 +601,10 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
 
       // Watch for resize event
       scope.$watchCollection('milestoneService', function(data) {
+        console.log("MILESTONE CHANGING", data);
         scope.render(data);
-      });
+      }, true);
+
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
