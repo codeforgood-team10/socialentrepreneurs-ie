@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <jmxConfigurator />
+ 
+ <property name="APP_NAME" value="seicfg-orm"/>
+
+   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+       <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+         <level>info</level>
+       </filter>
+       <append>false</append>
+       <file>/var/log/seicfg_orm.log</file>
+       <!-- Rollover at midnight each day -->
+       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+           <!-- daily rollover -->
+           <fileNamePattern>/var/log/seicfg_orm.log.%d{yyyy-MM-dd}</fileNamePattern>
+       </rollingPolicy>
+
+       <encoder>
+           <pattern>%d{HH:mm:ss.SSS} %-5p: [%c{0}] - %m%n</pattern>
+       </encoder>
+   </appender>
+
+   <!-- Application loggers -->
+   <logger name="uk.seicfg" level="info"/>
+   
+   <!-- 3rdparty Loggers -->
+   <logger name="org.springframework.core" level="info" />
+   <logger name="org.springframework.beans" level="info" />
+   <logger name="org.springframework.context" level="info" />
+   <logger name="org.springframework.web" level="info" />
+   
+  <!-- The Root logger -->
+  <root level="WARN" >
+    <appender-ref ref="FILE"/>
+    <appender-ref ref="CONSOLE"/>
+  </root>
+
+</configuration>

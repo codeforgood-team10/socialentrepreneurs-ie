@@ -1,0 +1,142 @@
+<html ng-app="dashboard">
+<head>
+	<title>Entrepreneur dashboard</title>
+	<link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <script src="components/d3/d3.min.js"></script>
+  <script src="components/underscore/underscore.js"></script>
+	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+  <script src="components/angular/angular.js"></script>
+  <script src="components/moment/moment.js"></script>
+  <script src="js/app.js"></script>
+	
+</head>
+
+<body>
+<div class="container">
+	<div class="col-lg-8 col-lg-offset-2">
+		<h3>Entrepreneur dashboard</h3> <a style"float:right;" href="/seicfg-web/logout">Logout</a>
+		<hr>
+		<div class="box" id="issues" ng-controller="IssuesController">
+
+			<h4 class="align-center">Issues ({{ unsolved.length || 0 }})</h4>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{  (unsolved.length+1) * 50 }}">
+          <g>
+            <line ng-attr-x1="{{ 40/2 }}" y1="1" ng-attr-x2="{{ 40/2 }}" ng-attr-y2="{{ (unsolved.length+1) * 50 - 20 }}"/>
+          </g>
+
+          <g>
+            <circle class="circleIssue" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
+            <foreignobject x="50" ng-attr-y="{{ 10 }}" width="100%" height="180">
+              <input type="text" placeholder="New issue encountered" ng-model="newIssue.text" ng-enter="add(newIssue)">
+            </foreignobject>
+
+          </g>
+
+          <g ng-repeat="issue in unsolved | orderBy:'time':true">
+            <circle class="circleIssue" cx="20" ng-attr-cy="{{ calculateCircleY($index+1) }}" r="20"></circle>
+            <foreignobject x="50" ng-attr-y="{{ (($index+1)*50) + 10 }}" width="100%" height="180">
+              {{issue.text}} <span class="label label-danger">{{ issue.time | fromNow }}</span>
+              <span class="close inline-close" ng-click="delete($index)">&times;</span>
+            </foreignobject>
+
+          </g>
+        </svg>
+
+      <div class="chart" d3-issues></div>
+		</div>
+
+		<div class="box" id="milestone" ng-controller="MilestoneController">
+
+			<h4>Milestones ({{ (milestoneService.milestone | filter:{solved:false}).length  }})</h4>
+
+			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ (getFutureMilestoneNumber() + 1) * 50 }}">
+
+				<line 
+					class="lineMilestoneFuture"
+					ng-attr-x1="{{ 40/2 }}" 
+					y1="1" 
+					ng-attr-x2="{{ 40/2 }}" 
+					ng-attr-y2="{{ (getFutureMilestoneNumber() + 1) * 50 - 20 }}">
+				</line>
+
+				<g>
+					<circle class="circleMilestoneFuture" cx="20" ng-attr-cy="{{ 20 }}" r="20"></circle>
+					<circle class="circleHole" cx="20" ng-attr-cy="{{ 20 }} " ng-attr-r=" {{ 20 - 5 }}"> </circle>
+					<foreignobject x="50" ng-attr-y="{{ 10 }}" width="100%" height="180">
+						<input type="text" placeholder="Insert new milestone" ng-model="newMilestone.text" ng-enter="add(newMilestone)">
+					</foreignobject>
+				</g>
+
+				<g ng-repeat="milestone in milestoneService.milestone | filter:{solved: false} | orderBy:'time':true">
+					<circle 
+						class="circleMilestoneFuture" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index + 1) }}" 
+						r="20">	
+					</circle>
+					<circle 
+						class="circleHole" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index + 1) }}" 
+						ng-attr-r=" {{ 20 - 5 }}"> 
+					</circle>
+					<foreignobject 
+						x="50" 
+						ng-attr-y="{{ calculateCircleY($index + 1) }}" 
+						width="100%" 
+						height="180">
+							{{milestone.text}}
+					</foreignobject>
+				</g>
+			</svg>
+
+			<h4>Solved Milestones ({{ (milestoneService.milestone | filter:{solved:true}).length  }})</h4>
+
+			<svg xmlns="http://www.w3.org/2000/svg" class="bubbles" ng-attr-height="{{ getPastMilestoneNumber() * 50 }}">
+
+				<line 
+					class="lineMilestonePast"
+					ng-attr-x1="{{ 40/2 }}" 
+					y1="1" 
+					ng-attr-x2="{{ 40/2 }}" 
+					ng-attr-y2="{{ getPastMilestoneNumber() * 50 - 20 }}">
+				</line>
+
+				<g ng-repeat="milestone in milestoneService.milestone | filter:{solved: true} | orderBy:'time':true">
+					<circle 
+						class="circleMilestonePast" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						r="20">
+					</circle>
+					<circle 
+						class="circleHole" 
+						ng-click="toggle(milestone)"
+						cx="20" 
+						ng-attr-cy="{{ calculateCircleY($index) }}" 
+						ng-attr-r=" {{ 20 - 5 }}"> 
+					</circle>
+					<foreignobject 
+						x="50" 
+						ng-attr-y="{{ calculateCircleY($index) }}" 
+						width="100%" 
+						height="180">
+							{{milestone.text}}
+					</foreignobject>
+				</g>
+			</svg>
+
+		</div>
+
+
+	</div>
+</div>
+
+</body>
+</html>
