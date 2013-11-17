@@ -1,5 +1,19 @@
-var dashboard = angular.module('dashboard', []);
+var dashboard = angular.module('dashboard', ['ngRoute']);
 
+dashboard.config(function($routeProvider, $locationProvider) {
+
+  //$locationProvider.html5Mode(true);
+  $routeProvider.
+    when('/', {
+      templateUrl: 'views/graphs.html'
+    }).
+    when('/timeline', {
+      templateUrl: 'views/timeline.html'
+    })
+});
+
+dashboard.controller('Link', function($scope) {
+})
 
 /*=================
 AngularJS Status
