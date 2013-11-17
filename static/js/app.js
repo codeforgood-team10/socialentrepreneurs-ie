@@ -53,7 +53,10 @@ x = {};
 AngularJS Milestones
 ====================*/
 dashboard.service('MilestoneService', function() {
-	this.milestone = [{text:"Issue here", time: new Date(), solved: true}, {text:"Issues 2 eye", time: new Date(), solved: false}];
+	this.milestone = [{text:"Issue here", time: new Date("2013-11-06"), solved: false},
+  {text:"Issues 2 eye", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
+  {text:"Issues 2 eye", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
+  {text:"Issues 2 eye", time: new Date("2013-11-03"), solvedTime:new Date("2013-11-05"), solved:true}];
 	this.solvedMilestone = [];
 });
 
@@ -345,7 +348,7 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
       };
 
       // hard-code data
-      scope.milestoneService = MilestoneService.issues;
+      scope.milestoneService = MilestoneService.milestone;
 
       // Watch for resize event
       scope.$watchCollection('milestoneService', function(data) {
@@ -354,7 +357,7 @@ dashboard.directive('d3Milestones', function($window, MilestoneService) {
       scope.$watch(function() {
         return angular.element($window)[0].innerWidth;
       }, function() {
-        scope.render(scope.issuesService);
+        scope.render(scope.milestoneService);
       });
 
       var calculate_frequency =  function(issues) {
