@@ -165,3 +165,30 @@
 .cashflow td {
 	padding: 0 5px;
 }
+
+.status-input {
+    position:relative;
+    display: inline-block;
+}
+
+.status-input textarea {
+    resize: none;
+    width: 600px;
+    height: 50px;
+}
+
+.inside-submit {
+    position:absolute;
+    bottom:5px;
+    right:5px;
+
+    font-size: 10px;
+}
+
+#statusSubmitButton {
+    padding:3px;
+}
+
+.center {
+    margin: 0 auto;
+}

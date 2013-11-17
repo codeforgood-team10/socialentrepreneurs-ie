@@ -1,7 +1,39 @@
 var dashboard = angular.module('dashboard', []);
 
+
+/*=================
+AngularJS Status
+=================*/
+
+dashboard.service('StatusService', function() {
+})
+
+dashboard.controller('StatusController', function($scope, StatusService) {
+  $scope.newStatus = {};
+  $scope.statuses = [
+    {text:"Status1", time: new Date()},
+    {text:"Status2", time: new Date()}
+    ];
+  $scope.statusService = StatusService;
+
+  $scope.add = function(status) {
+    console.log ("got here");
+
+    if (!status.text) return;
+
+    status.time = new Date();
+    $scope.statuses.push(status);
+
+    status = {};
+    $scope.newStatus = {};
+  }
+});
+
+/*==================
+AngularJS Issues
+==================*/
 dashboard.service('IssuesService', function() {
-	this.issues = [
+  this.issues = [
     {text:"Issue here", time: new Date("2013-11-06"), solved: false},
     {text:"Issues 2 eye", time: new Date("2013-11-01"), solvedTime:new Date("2013-11-04"), solved:true},
     {text:"Issues 2 eye", time: new Date("2013-11-02"), solvedTime:new Date("2013-11-05"), solved:true},
@@ -9,10 +41,6 @@ dashboard.service('IssuesService', function() {
   ];
 });
 
-
-/*==================
-AngularJS Issues
-==================*/
 dashboard.controller('UsersList', function($http, $scope) {
   $http.get("http://localhost:8080/seicfg-web/users").then(function(response) {
     $scope.users = response.data;
