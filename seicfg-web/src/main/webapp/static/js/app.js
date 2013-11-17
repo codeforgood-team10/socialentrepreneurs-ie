@@ -140,7 +140,7 @@ dashboard.controller('UsersList', function($http, $scope) {
     })
   }
 })
-dashboard.controller('IssuesController', function($scope, IssuesService, $filter){
+dashboard.controller('IssuesController', function($scope, IssuesService, $filter, $http){
 	$scope.newIssue = {};
 	$scope.issuesService = IssuesService;
 
@@ -151,13 +151,17 @@ dashboard.controller('IssuesController', function($scope, IssuesService, $filter
     return (index * 50) +20;
   }
 	$scope.add = function(newIssue) {
+
 		if (! newIssue.text) return;
 
 		newIssue.time = new Date();
     newIssue.solved = false;
     newIssue.solvedTime = false;
-		IssuesService.issues.push(newIssue);
-		$scope.newIssue = newIssue = {};
+
+    $http.post('http://localhost:8080/seicfg-web/updates/add', {type:'issue', value:newIssue.text, status:'', remarks:''}).then(function(response){
+      IssuesService.issues.push(response.data)
+      $scope.newIssue = newIssue = {};
+    });
 	}
 
   $scope.unsolved = $filter('filter')(IssuesService.issues, {solved: false});
