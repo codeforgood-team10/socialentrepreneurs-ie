@@ -61,7 +61,7 @@ dashboard.controller('Timeline', function($scope, IssuesService, StatusService, 
       if (!entry.obj.solved) text += " and still not solved!";
     }
 
-    else if (entry.type == 'mile' && 'created') {
+    else if (entry.type == 'mile' && 'solvedp') {
       console.log(entry);
       if (entry.obj.solved) text += "Achieved milestone ";
       text += "\""+entry.obj.text+"\"";
