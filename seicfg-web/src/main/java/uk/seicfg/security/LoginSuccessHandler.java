@@ -21,7 +21,7 @@ public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
     	//TODO Harish
     	LOG.info("LoginSuccessHandler <- onAuthenticationSuccess() -> for user: TODO Harish");
-        setDefaultTargetUrl("/user.html");
+        setDefaultTargetUrl("/static/user.html");
         super.onAuthenticationSuccess(request, response, authentication);
     }
 }
