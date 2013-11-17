@@ -134,6 +134,23 @@
 
 		</div>
 
+		<div class="box" id="cashflow" ng-controller="CashflowController">
+			<ul class="simple-list">
+				<li>
+					<input ng-model="money.text"></input>
+					<input ng-model="descr.text"></input>
+				</li>
+
+				<li>
+					<button type="button" ng-click="add()"> Click</button>
+				</li>
+
+				<li ng-repeat="entry in cashflowService.cashflow | orderBy:'time':true"> 
+					{{entry.detail}}
+				</li>
+			</ul>
+		</div>
+
 
 	</div>
 </div>
