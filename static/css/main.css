@@ -1,5 +1,30 @@
 #issues {
 }
+
+#cashflow .chart .line {
+    fill: none;
+    stroke: #ffd700;
+    stroke-width: 5px;
+}
+#cashflow .chart .point {
+    stroke: #ffd700;
+    stroke-width: 5px;
+    fill: #ffd700;
+}
+
+#cashflow .chart .tickPoint {
+    stroke: #30d863;
+    fill: #30d863;
+}
+
+#cashflow .chart .point:hover {
+    fill: #dfdfdf;
+}
+
+#cashflow path.area {
+    fill: #fff77c;
+}
+
 #issues .bubbles line {
    stroke:#D9534F;
    stroke-width:10;
@@ -61,7 +86,7 @@
 }
 
 .circleMilestonePast {
-	fill: #99cc32;
+	fill: #5CB85C;
 }
 
 .circleHole {
